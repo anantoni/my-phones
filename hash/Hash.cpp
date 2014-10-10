@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <iostream>
 #include "Hash.hpp"
 
 Hash::Hash(int bucketNumber) {

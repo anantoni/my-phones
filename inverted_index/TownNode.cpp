@@ -26,6 +26,7 @@ void TownNode::addRecord(Record *record) {
     if (head == nullptr) {
         head = new RecordPointer(record);
         head->setNext(nullptr);
+        this->population++;
     }
     else
         addRecord(head->getNext(), record );
@@ -36,7 +37,12 @@ void TownNode::addRecord(RecordPointer *tail, Record *record) {
     if (tail == nullptr) {
         head = new RecordPointer(record);
         head->setNext(nullptr);
+        this->population++;
     }
     else
         addRecord(tail->getNext(), record);
+}
+
+void TownNode::printPopulation() {
+    cout << "Town: " << this->town << " -- population: " << this->population << endl;
 }

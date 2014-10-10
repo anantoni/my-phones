@@ -1,7 +1,12 @@
+#include <iostream>
 #include "InvertedIndexList.hpp"
 
 InvertedIndexList::InvertedIndexList() {
     head = nullptr;
+}
+
+InvertedIndexList::~InvertedIndexList() {
+    cout << "Inverted index list destroyed" << endl;
 }
 
 void InvertedIndexList::addRecord(Record *record) {
@@ -28,4 +33,15 @@ void InvertedIndexList::addRecord(TownNode *tail, Record *record) {
         else
             addRecord(tail->getNext(), record);
     }
+}
+
+void InvertedIndexList::printPopulations() {
+    if (head == nullptr)
+        return;
+    TownNode *current = head;
+    while (current->getNext() != nullptr) {
+        current->printPopulation();
+        current = current->getNext();
+    }
+    current->printPopulation();
 }

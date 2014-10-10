@@ -18,5 +18,6 @@ public:
     string getTown();
     void setNext(TownNode *townNode);
     TownNode* getNext();
+    void printPopulation();
 };
 #endif

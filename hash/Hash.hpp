@@ -1,6 +1,7 @@
 #ifndef HASH_HPP
 #define HASH_HPP
-
+#include <stdlib.h>
+#include <iostream>
 #include "Bucket.hpp"
 
 class Hash {
