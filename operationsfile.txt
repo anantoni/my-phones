@@ -1,0 +1,19 @@
+i 6957303774 Kang Anastasia Nafplio 55.00
+l 6987773045
+d 6957303774
+i 6957303774 Kang Anastasia Nafplio 155.00
+i 6947978769 Papandrea Delphina Livadeia 56.00
+i 6953938782 Theodoridis Malaina Sparta 62.00
+l 6947978769
+i 6966568052 Pugh Erika Rafina 50.00
+i 6955480929 Kay Melissa Cholargos 95.00
+t 3 
+s Nafplio
+ft Nafplio 2
+fts
+min
+l 6955480929
+d 6955480929
+d 6947978769
+d 6957303774
+e
