@@ -25,22 +25,21 @@ void TownNode::setNext(TownNode *townNode) {
 void TownNode::addRecord(Record *record) {
     if (head == nullptr) {
         head = new RecordPointer(record);
-        head->setNext(nullptr);
+        head->next = nullptr;
         this->population++;
     }
     else
-        addRecord(head->getNext(), record );
-
+        addRecord(&(head->next), record );
 }
 
-void TownNode::addRecord(RecordPointer *tail, Record *record) {
-    if (tail == nullptr) {
-        head = new RecordPointer(record);
-        head->setNext(nullptr);
+void TownNode::addRecord(RecordPointer **tail, Record *record) {
+    if (*tail == nullptr) {
+        *tail = new RecordPointer(record);
+        (*tail)->next = nullptr;
         this->population++;
     }
     else
-        addRecord(tail->getNext(), record);
+        addRecord(&((*tail)->next), record);
 }
 
 void TownNode::printPopulation() {

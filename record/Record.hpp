@@ -5,6 +5,7 @@
 using namespace std;
 
 class Record {
+    friend class Bucket;
 private:
     string phone;
     string firstName;

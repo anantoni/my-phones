@@ -2,6 +2,8 @@
 #define INVERTED_INDEX_LIST_HPP
 #include "TownNode.hpp"
 
+class TownNode;
+
 class InvertedIndexList {
 private:
     TownNode *head;
@@ -9,7 +11,8 @@ public:
     InvertedIndexList();
     ~InvertedIndexList();
     void addRecord(Record *record);
-    void addRecord(TownNode *tail, Record *record);
+    void addRecord(TownNode **tail, Record *record);
     void printPopulations();
+    void sort();
 };
 #endif

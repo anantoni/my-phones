@@ -4,6 +4,7 @@
 #include "../record/Record.hpp"
 
 class RecordPointer {
+    friend class TownNode;
 private:
     Record* record;
     RecordPointer* next;
