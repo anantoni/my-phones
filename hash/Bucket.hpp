@@ -8,8 +8,8 @@ private:
     Record* head;
 public:
     Bucket();
-    bool pushBack(Record &record);
-    bool pushBack(Record* tail, Record &record);
+    bool pushBack(Record *record);
+    bool pushBack(Record* tail, Record *record);
 };
 
 #endif

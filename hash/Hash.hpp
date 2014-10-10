@@ -11,7 +11,7 @@ public:
     Hash(int bucketNumber);
     ~Hash();
     int selectBucket(string phone);
-    void addRecord(Record &record);
+    bool addRecord(Record *record);
 };
 
 #endif

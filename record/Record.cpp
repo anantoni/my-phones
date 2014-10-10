@@ -63,6 +63,9 @@ string Record::getFirstName() {
     return this->firstName;
 }
 
+string Record::getTown() {
+    return this->town;
+}
 float Record::getInvoice() {
     return this->invoice;
 }

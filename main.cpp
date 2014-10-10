@@ -2,7 +2,8 @@
 #include <string.h>
 #include "hash/Hash.hpp"
 #include "record/myRecord.hpp"
-#include "record/Record.hpp"
+#include "inverted_index/InvertedIndexList.hpp"
+
 using namespace std;
 
 int main(int argc, char** argv) {
@@ -41,11 +42,12 @@ int main(int argc, char** argv) {
         int numOfrecords = (int) lSize/sizeof(rec);
 
         Hash hash(10);
+        InvertedIndexList indexList();
         cout << "Records found in file " << numOfrecords << endl;
         for (int i = 0; i < numOfrecords; i++) {
             fread(&rec, sizeof(rec), 1, fpb);
             printf("%s %s %s %s %-5.2f\n", rec.phone, rec.LastName, rec.FirstName, rec.Town, rec.invoice);
-            Record record(rec.phone, rec.LastName, rec.FirstName, rec.Town, rec.invoice);
+            Record *record = new Record(rec.phone, rec.LastName, rec.FirstName, rec.Town, rec.invoice);
             hash.addRecord(record);
         }
 

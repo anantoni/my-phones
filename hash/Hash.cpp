@@ -1,8 +1,6 @@
 #include <stdlib.h>
 #include <iostream>
 #include "Hash.hpp"
-#include "Bucket.hpp"
-#include "../record/Record.hpp"
 
 Hash::Hash(int bucketNumber) {
     this->bucketNumber = bucketNumber;
@@ -25,10 +23,11 @@ int Hash::selectBucket(string phone) {
     return str_hash%bucketNumber;
 }
 
-void Hash::addRecord(Record &record) {
-    int bucketSelection = selectBucket(record.getPhone());
+bool Hash::addRecord(Record *record) {
+    int bucketSelection = selectBucket(record->getPhone());
     for (int i = 0; i < bucketNumber; i++) {
         if (bucketSelection == i) {
+            cout << "Selected bucket: " << bucketSelection << endl;
             if (bucketList[i]->pushBack(record) == true)
                 cout << "Record added successfully" << endl;
             else
