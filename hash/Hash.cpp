@@ -1,7 +1,7 @@
 #include "Hash.hpp"
 #include "../record/myRecord.hpp"
 
-Hash::Hash(int bucketNumber) {
+Hash::Hash(int bucketNumber, InvertedIndexList *invertedIndex) {
     this->bucketNumber = bucketNumber;
     if ((bucketList = new Bucket*[bucketNumber]) == nullptr) {
         cerr << "Error in bucket list allocation" << endl;
@@ -10,6 +10,7 @@ Hash::Hash(int bucketNumber) {
     for (int i = 0; i < bucketNumber; i++)
         bucketList[i] = new Bucket();
 
+    this->invertedIndex = invertedIndex;
     min = 0;
     max = 0;
 }
@@ -29,13 +30,15 @@ bool Hash::addRecord(Record *record) {
     int bucketSelection = selectBucket(record->getPhone());
     for (int i = 0; i < bucketNumber; i++) {
         if (bucketSelection == i) {
-            cout << "Selected bucket: " << bucketSelection << endl;
             if (bucketList[i]->pushBack(record) == true) {
                 cout << "Record added successfully" << endl;
+                invertedIndex->addRecord(record);
+
                 int phoneno = atoi(record->getPhone().c_str());
+
                 if (phoneno > max)
                     max = phoneno;
-                if (phoneno < min)
+                if (phoneno < min || min == 0)
                     min = phoneno;
                 return true;
             }
@@ -48,12 +51,11 @@ bool Hash::addRecord(Record *record) {
 }
 
 void Hash::printFirstNames() {
-    for (int i = 0; i < bucketNumber; i++) {
+    for (int i = 0; i < bucketNumber; i++)
         bucketList[i]->printAllFirstNames();
-    }
 }
 
-void Hash::loadDataFile(string dataFile, InvertedIndexList *invertedIndex) {
+void Hash::loadDataFile(string dataFile) {
     FILE *fpb = fopen(dataFile.c_str(), "rb");
     if (fpb == NULL) {
         cerr << "Cannot open binary file " << dataFile << endl;
@@ -66,16 +68,22 @@ void Hash::loadDataFile(string dataFile, InvertedIndexList *invertedIndex) {
     rewind(fpb);
 
     MyRecord rec;
-    int numOfrecords = (int) lSize/sizeof(rec);
+    size_t numOfrecords = (int) lSize/sizeof(rec);
 
     cout << "Records found in file " << numOfrecords << endl;
     for (int i = 0; i < numOfrecords; i++) {
         fread(&rec, sizeof(rec), 1, fpb);
         printf("%s %s %s %s %-5.2f\n", rec.phone, rec.LastName, rec.FirstName, rec.Town, rec.invoice);
         Record *record = new Record(rec.phone, rec.LastName, rec.FirstName, rec.Town, rec.invoice);
-        if (this->addRecord(record))
-            invertedIndex->addRecord(record);
+        this->addRecord(record);
     }
     fclose (fpb);
+}
 
+int Hash::getMaxPhoneNumber() {
+    return max;
+}
+
+int Hash::getMinPhoneNumber() {
+    return min;
 }

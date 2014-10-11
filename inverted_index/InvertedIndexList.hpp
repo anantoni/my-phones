@@ -14,5 +14,7 @@ public:
     void addRecord(TownNode **tail, Record *record);
     void printPopulations();
     void sort();
+    void printTownTopSpenders(string town, int l);
+    void printPopulation(string town);
 };
 #endif

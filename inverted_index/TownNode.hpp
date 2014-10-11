@@ -23,5 +23,6 @@ public:
     void setNext(TownNode *townNode);
     TownNode* getNext();
     void printPopulation();
+    void printTownTopSpenders(int l);
 };
 #endif

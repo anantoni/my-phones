@@ -26,22 +26,44 @@ void TownNode::addRecord(Record *record) {
     if (head == nullptr) {
         head = new RecordPointer(record);
         head->next = nullptr;
+        head->previous = nullptr;
         this->population++;
     }
-    else
-        addRecord(&(head->next), record );
-}
+    else {
+        RecordPointer *current = head;
+        while (record->getInvoice() < current->getRecord()->getInvoice()) {
+            if (current->next == nullptr) {
+                current->next = new RecordPointer(record);
+                current->next->previous = current;
+                current->next->next = nullptr;
+                this->population++;
+                return;
+            }
+            current = current->next;
 
-void TownNode::addRecord(RecordPointer **tail, Record *record) {
-    if (*tail == nullptr) {
-        *tail = new RecordPointer(record);
-        (*tail)->next = nullptr;
+        }
+
+        RecordPointer *newNode = new RecordPointer(record);
+        if (current == head)
+            head = newNode;
+        if (current->previous != nullptr)
+            current->previous->next = newNode;
+        newNode->previous = current->previous;
+        current->previous = newNode;
+        newNode->next = current;
         this->population++;
     }
-    else
-        addRecord(&((*tail)->next), record);
 }
 
 void TownNode::printPopulation() {
-    cout << "Town: " << this->town << " -- population: " << this->population << endl;
+    cout << this->town << ":" << this->population << endl;
+}
+
+void TownNode::printTownTopSpenders(int l) {
+    RecordPointer *current = head;
+    while (current != nullptr && l > 0) {
+        cout << current->getRecord()->getPhone() << " " << current->getRecord()->getInvoice() << endl;
+        current = current->next;
+        l--;
+    }
 }

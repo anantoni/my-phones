@@ -9,17 +9,17 @@ class Hash {
 private:
     int bucketNumber, min, max;
     Bucket **bucketList;
+    InvertedIndexList *invertedIndex;
 
 public:
-    Hash(int bucketNumber);
+    Hash(int bucketNumber, InvertedIndexList *invertedIndex);
     ~Hash();
     int selectBucket(string phone);
     bool addRecord(Record *record);
     void printFirstNames();
-    void loadDataFile(string dataFile, InvertedIndexList *invertedIndex);
-    string getMinPhoneNumber();
-    string getMaxPhoneNumber();
-
+    void loadDataFile(string dataFile);
+    int getMinPhoneNumber();
+    int getMaxPhoneNumber();
 };
 
 #endif

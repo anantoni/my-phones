@@ -11,3 +11,7 @@ void RecordPointer::setNext(RecordPointer *recordPointer) {
 RecordPointer* RecordPointer::getNext() {
     return this->next;
 }
+
+Record* RecordPointer::getRecord() {
+    return this->record;
+}

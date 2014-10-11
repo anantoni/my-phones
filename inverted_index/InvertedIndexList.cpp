@@ -49,3 +49,28 @@ void InvertedIndexList::printPopulations() {
     current->printPopulation();
 }
 
+void InvertedIndexList::printTownTopSpenders(string town, int l) {
+    TownNode *current = head;
+    while (current != nullptr) {
+        if (!(current->getTown().compare(town))) {
+            current->printTownTopSpenders(l);
+            return;
+        }
+        else
+            current = current->next;
+    }
+    cout << "No records found for given town." << endl;
+}
+
+void InvertedIndexList::printPopulation(string town) {
+    TownNode *current = head;
+    while (current != nullptr) {
+        if (!(current->getTown().compare(town))) {
+            current->printPopulation();
+            return;
+        }
+        else
+            current = current->next;
+    }
+    cout << "No records found for given town." << endl;
+}

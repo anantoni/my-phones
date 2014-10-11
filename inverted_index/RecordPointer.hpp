@@ -7,12 +7,14 @@ class RecordPointer {
     friend class TownNode;
 private:
     Record* record;
-    RecordPointer* next;
+    RecordPointer *next;
+    RecordPointer *previous;
 
 public:
     RecordPointer(Record *record);
     ~RecordPointer();
     void setNext(RecordPointer* recordPointer);
     RecordPointer* getNext();
+    Record* getRecord();
 };
 #endif
