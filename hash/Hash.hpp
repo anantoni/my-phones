@@ -7,7 +7,8 @@
 
 class Hash {
 private:
-    int bucketNumber, min, max;
+    int bucketNumber;
+    long min, max;
     Bucket **bucketList;
     InvertedIndexList *invertedIndex;
 
@@ -20,8 +21,11 @@ public:
     void queryRecord(string phone);
     void printFirstNames();
     void loadDataFile(string dataFile);
-    int getMinPhoneNumber();
-    int getMaxPhoneNumber();
+    long getMinPhoneNumber();
+    long getMaxPhoneNumber();
+    void updateMin();
+    void updateMax();
+    void sortInvertedIndex();
 };
 
 #endif

@@ -14,6 +14,8 @@ public:
     void printAllFirstNames();
     void queryRecord(string phone);
     string deleteRecord(string phone);
+    long getBucketMin();
+    long getBucketMax();
 };
 
 #endif

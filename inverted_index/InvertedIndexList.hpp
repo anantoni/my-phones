@@ -18,5 +18,6 @@ public:
     void printPopulation(string town);
     void deleteRecord(string town, string phone);
     void printInvoiceSum(string town);
+    void printTopTowns(int k);
 };
 #endif

@@ -1,3 +1,4 @@
+#include <sstream>
 #include "Hash.hpp"
 #include "../record/myRecord.hpp"
 
@@ -11,8 +12,8 @@ Hash::Hash(int bucketNumber, InvertedIndexList *invertedIndex) {
         bucketList[i] = new Bucket();
 
     this->invertedIndex = invertedIndex;
-    min = 0;
-    max = 0;
+    this->min = 0;
+    this->max = 0;
 }
 
 Hash::~Hash() {
@@ -28,16 +29,18 @@ int Hash::selectBucket(string phone) {
 
 bool Hash::addRecord(Record *record) {
     int bucketSelection = selectBucket(record->getPhone());
+    cout << "Bucket selected: " << bucketSelection << endl;
+
     if (bucketList[bucketSelection]->pushBack(record) == true) {
         cout << "Phone number " << record->getPhone() << " added successfully" << endl;
         invertedIndex->addRecord(record);
 
-        int phoneno = atoi(record->getPhone().c_str());
-
-        if (phoneno > max)
-            max = phoneno;
-        if (phoneno < min || min == 0)
-            min = phoneno;
+        long phone = atol(record->getPhone().c_str());
+        cout << phone << endl;
+        if (phone > max)
+            max = phone;
+        if (phone < min || min == 0)
+            min = phone;
         return true;
     }
     else {
@@ -52,11 +55,20 @@ bool Hash::deleteRecord(string phone) {
     if (town.compare("")) {
         cout << "Phone number " << phone << " deleted successfully." << endl;
         invertedIndex->deleteRecord(town, phone);
-        //update MinMax
+        cout << "wtf" << endl;
+        long deletedPhone = atol(phone.c_str());
+
+        if (deletedPhone == min) {
+            min = 0;
+            updateMin();
+        }
+        if (deletedPhone == max) {
+            max = 0;
+            updateMax();
+        }
     }
     else
         cout << "Phone number not found." << endl;
-
 }
 
 void Hash::queryRecord(string phone) {
@@ -96,10 +108,31 @@ void Hash::loadDataFile(string dataFile) {
     invertedIndex->printPopulations();
 }
 
-int Hash::getMaxPhoneNumber() {
-    return max;
+long Hash::getMaxPhoneNumber() {
+    return this->max;
 }
 
-int Hash::getMinPhoneNumber() {
-    return min;
+long Hash::getMinPhoneNumber() {
+    return this->min;
+}
+
+void Hash::updateMin() {
+    for (int i = 0; i < bucketNumber; i++) {
+        long bucketMin = bucketList[i]->getBucketMin();
+        if (bucketMin != -1 && (bucketMin < min || min == 0))
+            min = bucketMin;
+    }
+}
+
+void Hash::updateMax() {
+    for (int i = 0; i < bucketNumber; i++) {
+        long bucketMax = bucketList[i]->getBucketMax();
+        cout << bucketMax << endl;
+        if (bucketMax != -1 && bucketMax > max)
+            max = bucketMax;
+    }
+}
+
+void Hash::sortInvertedIndex() {
+    this->invertedIndex->sort();
 }

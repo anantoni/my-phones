@@ -58,7 +58,6 @@ int main(int argc, char** argv) {
         if (dataFile.compare(""))
             hash.loadDataFile(dataFile);
 
-        invertedIndex.printPopulations();
         hash.printFirstNames();
 
         string line;
@@ -73,10 +72,12 @@ int main(int argc, char** argv) {
                 Record *record = new Record(recordArgs[0], recordArgs[2], recordArgs[1],
                         recordArgs[3], atof(recordArgs[4].c_str()));
                 hash.addRecord(record);
+                hash.sortInvertedIndex();
             }
             else if (line[0] == 'd' && line[1] == ' ') {
                 string phone = line.substr(2);
                 hash.deleteRecord(phone);
+                hash.sortInvertedIndex();
             }
             else if (line[0] == 'q' && line[1] == ' ') {
                 string phone = line.substr(2);
@@ -102,7 +103,7 @@ int main(int argc, char** argv) {
                 std::size_t found = line.find(' ', 3);
                 if (found != std::string::npos) {
                     cout << "found: " << found << endl;
-                    town = line.substr(3, found-3);
+                    town = line.substr(3, found - 3);
                     l = line.substr(found + 1);
                 }
                 else {
@@ -113,12 +114,19 @@ int main(int argc, char** argv) {
                 cout << town << endl;
                 cout << l << endl;
                 if (l.find_first_not_of("0123456789") != std::string::npos) {
-                    cout << "Usage: ft town l where l is a number" << endl;
+                    cout << "Usage: \"ft town l\" where l is a number" << endl;
                     continue;
                 }
 
                 invertedIndex.printTownTopSpenders(town, atoi(l.c_str()));
-
+            }
+            else if (line[0] == 't' && line[1] == ' ') {
+                string k = line.substr(2);
+                if (k.find_first_not_of("0123456789") != std::string::npos) {
+                    cout << "Usage: \"t k\" where  is a number" << endl;
+                    continue;
+                }
+                invertedIndex.printTopTowns(atoi(k.c_str()));
             }
             else if (line[0] == 'p' && line[1] == ' ') {
                 string town = line.substr(2);

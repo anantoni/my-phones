@@ -39,6 +39,7 @@ void InvertedIndexList::addRecord(TownNode **tail, Record *record) {
 
 void InvertedIndexList::deleteRecord(string town, string phone) {
     TownNode *current = head;
+
     while (current != nullptr) {
         if (!(current->getTown().compare(town)))
             current->deleteRecord(phone);
@@ -50,7 +51,7 @@ void InvertedIndexList::printPopulations() {
     if (head == nullptr)
         return;
     TownNode *current = head;
-    cout << current->getNext() << endl;
+
     while (current->getNext() != nullptr) {
         current->printPopulation();
         current = current->getNext();
@@ -115,5 +116,15 @@ void InvertedIndexList::sort() {
         if ((current = current->next) == nullptr)
             return;
         next = current->next;
+    }
+}
+
+void InvertedIndexList::printTopTowns(int k) {
+    TownNode *current = head;
+
+    while (current != nullptr && k > 0) {
+        cout << current->getTown() << ": " << current->population << endl;
+        k--;
+        current = current->next;
     }
 }

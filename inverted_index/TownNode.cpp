@@ -29,7 +29,7 @@ TownNode &TownNode::operator=(const TownNode &node) {
 }
 
 TownNode::~TownNode() {
-    cout << "Town node destroyed" << endl;
+    //cout << "Town node destroyed" << endl;
 }
 
 string TownNode::getTown() {
@@ -85,11 +85,14 @@ void TownNode::deleteRecord(string phone) {
 
     while (current != nullptr) {
         if (!(current->getRecord()->getPhone().compare(phone))) {
-            if (counter == 0)
+            if (counter == 0) {
                 head = current->next;
+                current->next->previous = nullptr;
+            }
             else {
                 current->previous->next = current->next;
-                current->next->previous = current->previous;
+                if (current->next != nullptr)
+                    current->next->previous = current->previous;
             }
             this->invoiceSum -= current->getRecord()->getInvoice();
             delete current;

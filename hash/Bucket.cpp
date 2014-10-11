@@ -77,3 +77,38 @@ string Bucket::deleteRecord(string phone) {
     }
     return "";
 }
+
+long Bucket::getBucketMin() {
+    Record *current = head;
+
+    if (current == nullptr)
+        return -1;
+
+    long min = atol(head->getPhone().c_str());
+    while (current != nullptr) {
+        long phone = atol(current->getPhone().c_str());
+        if (phone < min)
+            min = phone;
+        current = current->next;
+    }
+
+    return min;
+}
+
+long Bucket::getBucketMax() {
+    Record *current = head;
+
+    if (current == nullptr)
+        return -1;
+
+    long max = atol(head->getPhone().c_str());
+    while (current != nullptr) {
+        long phone = atol(current->getPhone().c_str());
+        if (phone > max)
+            max = phone;
+        current = current->next;
+    }
+
+    return max;
+
+}
