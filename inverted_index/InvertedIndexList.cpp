@@ -86,6 +86,7 @@ void InvertedIndexList::printPopulation(string town) {
 
 void InvertedIndexList::printInvoiceSum(string town) {
     TownNode *current = head;
+
     while (current != nullptr) {
         if (!(current->getTown().compare(town))) {
             current->printInvoiceSum();
@@ -95,4 +96,24 @@ void InvertedIndexList::printInvoiceSum(string town) {
             current = current->next;
     }
     cout << "No records found for given town." << endl;
+}
+
+void InvertedIndexList::sort() {
+    TownNode *current = head;
+    TownNode *next = head->next;
+
+    while(current != nullptr){
+        while(next != nullptr){
+            if(next->population > current->population) {
+                TownNode temp(*current);
+                *current = *next;
+                *next = temp;
+            }
+            next = next->next;
+        }
+
+        if ((current = current->next) == nullptr)
+            return;
+        next = current->next;
+    }
 }

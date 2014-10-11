@@ -92,6 +92,8 @@ void Hash::loadDataFile(string dataFile) {
         this->addRecord(record);
     }
     fclose (fpb);
+    invertedIndex->sort();
+    invertedIndex->printPopulations();
 }
 
 int Hash::getMaxPhoneNumber() {

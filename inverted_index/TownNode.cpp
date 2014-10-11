@@ -11,6 +11,27 @@ TownNode::TownNode(string town) {
     this->invoiceSum;
 }
 
+TownNode::TownNode(const TownNode &node) {
+    this->town = node.town;
+    this->head = node.head;
+    this->population = node.population;
+    this->next = node.next;
+    this->invoiceSum = node.invoiceSum;
+}
+
+TownNode &TownNode::operator=(const TownNode &node) {
+    this->town = node.town;
+    this->head = node.head;
+    this->population = node.population;
+    this->invoiceSum = node.invoiceSum;
+
+    return *this;
+}
+
+TownNode::~TownNode() {
+    cout << "Town node destroyed" << endl;
+}
+
 string TownNode::getTown() {
     return this->town;
 }
@@ -94,3 +115,5 @@ void TownNode::printTownTopSpenders(int l) {
 void TownNode::printInvoiceSum() {
     cout << this->town << ": " << this->invoiceSum << endl;
 }
+
+

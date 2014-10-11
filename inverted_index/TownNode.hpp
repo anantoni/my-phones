@@ -17,6 +17,8 @@ private:
 
 public:
     TownNode(string town);
+    TownNode(const TownNode &node);
+    TownNode& operator= (const TownNode& node);
     ~TownNode();
     void addRecord(Record *record);
     void addRecord(RecordPointer **tail, Record *record);
