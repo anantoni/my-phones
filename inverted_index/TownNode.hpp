@@ -12,6 +12,7 @@ private:
     string town;
     RecordPointer *head;
     int population;
+    float invoiceSum;
     TownNode *next;
 
 public:
@@ -24,5 +25,7 @@ public:
     TownNode* getNext();
     void printPopulation();
     void printTownTopSpenders(int l);
+    void deleteRecord(string phone);
+    void printInvoiceSum();
 };
 #endif

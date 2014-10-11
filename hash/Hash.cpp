@@ -28,26 +28,40 @@ int Hash::selectBucket(string phone) {
 
 bool Hash::addRecord(Record *record) {
     int bucketSelection = selectBucket(record->getPhone());
-    for (int i = 0; i < bucketNumber; i++) {
-        if (bucketSelection == i) {
-            if (bucketList[i]->pushBack(record) == true) {
-                cout << "Record added successfully" << endl;
-                invertedIndex->addRecord(record);
+    if (bucketList[bucketSelection]->pushBack(record) == true) {
+        cout << "Phone number " << record->getPhone() << " added successfully" << endl;
+        invertedIndex->addRecord(record);
 
-                int phoneno = atoi(record->getPhone().c_str());
+        int phoneno = atoi(record->getPhone().c_str());
 
-                if (phoneno > max)
-                    max = phoneno;
-                if (phoneno < min || min == 0)
-                    min = phoneno;
-                return true;
-            }
-            else {
-                cout << "Record not added: Duplicate phone number exists" << endl;
-                return false;
-            }
-        }
+        if (phoneno > max)
+            max = phoneno;
+        if (phoneno < min || min == 0)
+            min = phoneno;
+        return true;
     }
+    else {
+        cout << "Record not added: Duplicate phone number exists." << endl;
+        return false;
+    }
+}
+
+bool Hash::deleteRecord(string phone) {
+    int bucketSelection = selectBucket(phone);
+    string town = bucketList[bucketSelection]->deleteRecord(phone);
+    if (town.compare("")) {
+        cout << "Phone number " << phone << " deleted successfully." << endl;
+        invertedIndex->deleteRecord(town, phone);
+        //update MinMax
+    }
+    else
+        cout << "Phone number not found." << endl;
+
+}
+
+void Hash::queryRecord(string phone) {
+    int bucketSelection = selectBucket(phone);
+    bucketList[bucketSelection]->queryRecord(phone);
 }
 
 void Hash::printFirstNames() {
@@ -70,7 +84,7 @@ void Hash::loadDataFile(string dataFile) {
     MyRecord rec;
     size_t numOfrecords = (int) lSize/sizeof(rec);
 
-    cout << "Records found in file " << numOfrecords << endl;
+    //cout << "Records found in file " << numOfrecords << endl;
     for (int i = 0; i < numOfrecords; i++) {
         fread(&rec, sizeof(rec), 1, fpb);
         printf("%s %s %s %s %-5.2f\n", rec.phone, rec.LastName, rec.FirstName, rec.Town, rec.invoice);

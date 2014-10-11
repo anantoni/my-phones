@@ -12,6 +12,8 @@ public:
     bool pushBack(Record *record);
     bool pushBack(Record **tail, Record *record);
     void printAllFirstNames();
+    void queryRecord(string phone);
+    string deleteRecord(string phone);
 };
 
 #endif

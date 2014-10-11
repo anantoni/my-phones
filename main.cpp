@@ -74,6 +74,18 @@ int main(int argc, char** argv) {
                         recordArgs[3], atof(recordArgs[4].c_str()));
                 hash.addRecord(record);
             }
+            else if (line[0] == 'd' && line[1] == ' ') {
+                string phone = line.substr(2);
+                hash.deleteRecord(phone);
+            }
+            else if (line[0] == 'q' && line[1] == ' ') {
+                string phone = line.substr(2);
+                hash.queryRecord(phone);
+            }
+            else if (line[0] == 's' && line[1] == ' ') {
+                string town = line.substr(2);
+                invertedIndex.printInvoiceSum(town);
+            }
             else if (!(line.compare("e")))
                 break;
             else if (!(line.compare("min")))
@@ -112,10 +124,8 @@ int main(int argc, char** argv) {
                 string town = line.substr(2);
                 invertedIndex.printPopulation(town);
             }
-        };
-
+        }
     }
-
 
     return 0;
 }

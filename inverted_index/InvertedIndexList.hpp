@@ -16,5 +16,7 @@ public:
     void sort();
     void printTownTopSpenders(string town, int l);
     void printPopulation(string town);
+    void deleteRecord(string town, string phone);
+    void printInvoiceSum(string town);
 };
 #endif

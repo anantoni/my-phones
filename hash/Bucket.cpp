@@ -35,6 +35,18 @@ bool Bucket::pushBack(Record **tail, Record* record) {
     }
 }
 
+void Bucket::queryRecord(string phone) {
+    Record* current = head;
+    while (current != nullptr) {
+        if (!(current->getPhone().compare(phone))) {
+            cout << current->getPhone() << " " << current->getFirstName() << " " << current->getLastName() << " " << current->getTown() << " " << current->getInvoice() << endl;
+            return;
+        }
+        current = current->next;
+    }
+    cout << "Phone number not found " << endl;
+}
+
 void Bucket::printAllFirstNames() {
     if (head == nullptr)
         return;
@@ -45,4 +57,23 @@ void Bucket::printAllFirstNames() {
         current = current->getNext();
     }
     cout << current->getFirstName() << endl;
+}
+
+string Bucket::deleteRecord(string phone) {
+    Record *current = head;
+    Record *previous = nullptr;
+    int counter = 0;
+
+    while (current != nullptr) {
+        if (!(current->getPhone().compare(phone))) {
+            previous->next = current->next;
+            if (counter == 0)
+                head = current;
+            return current->getTown();
+        }
+        previous = current;
+        current = current->next;
+        counter++;
+    }
+    return "";
 }

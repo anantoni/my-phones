@@ -16,6 +16,8 @@ public:
     ~Hash();
     int selectBucket(string phone);
     bool addRecord(Record *record);
+    bool deleteRecord(string phone);
+    void queryRecord(string phone);
     void printFirstNames();
     void loadDataFile(string dataFile);
     int getMinPhoneNumber();

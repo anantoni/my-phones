@@ -1,7 +1,13 @@
+#include <iostream>
 #include "RecordPointer.hpp"
 
 RecordPointer::RecordPointer(Record *record) {
     this->record = record;
+}
+
+RecordPointer::~RecordPointer() {
+    cout << "Record pointer deleted" << endl;
+    delete record;
 }
 
 void RecordPointer::setNext(RecordPointer *recordPointer) {
