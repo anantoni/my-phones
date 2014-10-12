@@ -1,9 +1,10 @@
 #ifndef INVERTED_INDEX_LIST_HPP
 #define INVERTED_INDEX_LIST_HPP
 #include "TownNode.hpp"
+#include "Triple.hpp"
 
 class TownNode;
-
+class Triple;
 class InvertedIndexList {
 private:
     TownNode *head;
@@ -19,5 +20,6 @@ public:
     void deleteRecord(string town, string phone);
     void printInvoiceSum(string town);
     void printTopTowns(int k);
+    void printTopSpenderPerTown();
 };
 #endif

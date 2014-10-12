@@ -128,3 +128,35 @@ void InvertedIndexList::printTopTowns(int k) {
         current = current->next;
     }
 }
+
+void InvertedIndexList::printTopSpenderPerTown() {
+    TownNode *currentTown = head;
+    Triple *topList = nullptr;
+    Triple *currentTop = topList;
+
+    while (currentTown != nullptr) {
+        Triple *triple = new Triple(currentTown->getTown(),
+                currentTown->head->getRecord()->getPhone(), currentTown->head->getRecord()->getInvoice());
+
+        if (topList == nullptr || topList->invoice < triple->invoice) {
+            triple->next = topList;
+            topList = triple;
+        }
+        else {
+            currentTop = topList;
+            while (currentTop->next != nullptr && currentTop->next->invoice >= triple->invoice) {
+                currentTop = currentTop->next;
+            }
+            triple->next = currentTop->next;
+            currentTop->next = triple;
+        }
+        currentTown = currentTown->next;
+    }
+
+    currentTop = topList;
+    while (currentTop != nullptr) {
+        cout << currentTop->town << " " << currentTop->phoneno << " " << currentTop->invoice << endl;
+        currentTop = currentTop->next;
+    }
+
+}

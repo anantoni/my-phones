@@ -26,6 +26,7 @@ public:
     void updateMin();
     void updateMax();
     void sortInvertedIndex();
+    void readFromStream(istream &is);
 };
 
 #endif
