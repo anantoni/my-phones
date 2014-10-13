@@ -28,8 +28,18 @@ TownNode &TownNode::operator=(const TownNode &node) {
     return *this;
 }
 
+void TownNode::clean() {
+    RecordPointer *current = head;
+    RecordPointer *next = nullptr;
+    while (current != nullptr) {
+        next = current->next;
+        delete current;
+        current = next;
+    }
+}
+
 TownNode::~TownNode() {
-    //cout << "Town node destroyed" << endl;
+    cout << "Town node destroyed" << endl;
 }
 
 string TownNode::getTown() {
@@ -87,7 +97,8 @@ void TownNode::deleteRecord(string phone) {
         if (!(current->getRecord()->getPhone().compare(phone))) {
             if (counter == 0) {
                 head = current->next;
-                current->next->previous = nullptr;
+                if (head != nullptr)
+                    head->previous = nullptr;
             }
             else {
                 current->previous->next = current->next;

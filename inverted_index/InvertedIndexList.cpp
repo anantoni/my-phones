@@ -6,6 +6,15 @@ InvertedIndexList::InvertedIndexList() {
 }
 
 InvertedIndexList::~InvertedIndexList() {
+    TownNode *current = head;
+    TownNode *next = nullptr;
+
+    while (current != nullptr) {
+        next = current->next;
+        current->clean();
+        delete current;
+        current = next;
+    }
     cout << "Inverted index destroyed" << endl;
 }
 
@@ -100,6 +109,7 @@ void InvertedIndexList::printInvoiceSum(string town) {
 }
 
 void InvertedIndexList::sort() {
+    cout << "sorting" << endl;
     TownNode *current = head;
     TownNode *next = head->next;
 

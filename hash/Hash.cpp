@@ -18,6 +18,8 @@ Hash::Hash(int bucketNumber, InvertedIndexList *invertedIndex) {
 }
 
 Hash::~Hash() {
+    for (int i = 0; i < bucketNumber; i++)
+        delete bucketList[i];
     cout << "Hash Destroyed" << endl;
 }
 
@@ -56,7 +58,7 @@ bool Hash::deleteRecord(string phone) {
     if (town.compare("")) {
         cout << "Phone number " << phone << " deleted successfully." << endl;
         invertedIndex->deleteRecord(town, phone);
-        cout << "wtf" << endl;
+
         long deletedPhone = atol(phone.c_str());
 
         if (deletedPhone == min) {
@@ -85,7 +87,7 @@ void Hash::printFirstNames() {
 void Hash::loadDataFile(string dataFile) {
     FILE *fpb = fopen(dataFile.c_str(), "rb");
     if (fpb == NULL) {
-        cerr << "Data file " << dataFile << " not found" << endl;
+        cout << "Data file " << dataFile << " not found" << endl;
         return;
     }
 
@@ -106,7 +108,8 @@ void Hash::loadDataFile(string dataFile) {
     }
     fclose (fpb);
     invertedIndex->sort();
-    invertedIndex->printPopulations();
+//    invertedIndex->printPopulations();
+    cout << "Data file loaded successfully" << endl;
 }
 
 long Hash::getMaxPhoneNumber() {

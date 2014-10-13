@@ -5,6 +5,16 @@ Bucket::Bucket() {
     head = nullptr;
 }
 
+Bucket::~Bucket() {
+    Record* current = head;
+    Record* next = nullptr;
+    while (current!= nullptr) {
+        next = current->next;
+        delete current;
+        current = next;
+    }
+}
+
 bool Bucket::pushBack(Record* record) {
     if (head == nullptr) {
         head = record;
@@ -60,20 +70,27 @@ void Bucket::printAllFirstNames() {
 }
 
 string Bucket::deleteRecord(string phone) {
-    Record *current = head;
-    Record *previous = nullptr;
-    int counter = 0;
+    cout << "Bucket::deleteRecord()" << endl;
+    if (head == nullptr)
+        return "";
 
-    while (current != nullptr) {
-        if (!(current->getPhone().compare(phone))) {
-            previous->next = current->next;
-            if (counter == 0)
-                head = current;
-            return current->getTown();
+    Record *current = head;
+    if (!(head->getPhone().compare(phone))) {
+        cout << "first element" << endl;
+        string town = head->getTown();
+        delete head;
+        head = current->next;
+        return town;
+    }
+
+    while (current->next != nullptr) {
+        if (!(current->next->getPhone().compare(phone))) {
+            string town = current->next->getTown();
+            current->next = current->next->next;
+            delete current->next;
+            return town;
         }
-        previous = current;
         current = current->next;
-        counter++;
     }
     return "";
 }
