@@ -32,7 +32,6 @@ int Hash::selectBucket(string phone) {
 
 bool Hash::addRecord(Record *record) {
     int bucketSelection = selectBucket(record->getPhone());
-    cout << "Bucket selected: " << bucketSelection << endl;
 
     if (bucketList[bucketSelection]->pushBack(record) == true) {
         cout << "Phone number " << record->getPhone() << " added successfully" << endl;
@@ -207,7 +206,6 @@ void Hash::readFromStream(istream &is) {
             string l;
             std::size_t found = line.find(' ', 3);
             if (found != std::string::npos) {
-                cout << "found: " << found << endl;
                 town = line.substr(3, found - 3);
                 l = line.substr(found + 1);
             }
@@ -216,8 +214,6 @@ void Hash::readFromStream(istream &is) {
                 continue;
             }
 
-            cout << town << endl;
-            cout << l << endl;
             if (l.find_first_not_of("0123456789") != std::string::npos) {
                 cout << "Usage: \"ft town l\" where l is a number" << endl;
                 continue;
@@ -228,7 +224,7 @@ void Hash::readFromStream(istream &is) {
         else if (line[0] == 't' && line[1] == ' ') {
             string k = line.substr(2);
             if (k.find_first_not_of("0123456789") != std::string::npos) {
-                cout << "Usage: \"t k\" where  is a number" << endl;
+                cout << "Usage: \"t k\" where k is a number" << endl;
                 continue;
             }
             invertedIndex->printTopTowns(atoi(k.c_str()));
@@ -240,5 +236,8 @@ void Hash::readFromStream(istream &is) {
         else if (!(line.compare("fts"))) {
             invertedIndex->printTopSpenderPerTown();
         }
+        else
+            cout << "Invalid command" << endl;
+        cout << endl;
     }
 }

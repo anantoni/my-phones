@@ -24,7 +24,7 @@ Record::Record(char *phone, char *lastName, char *firstName,
 }
 
 Record::~Record() {
-    cout << "Record destroyed" << endl;
+//    cout << "Record destroyed" << endl;
 }
 
 void Record::setPhone(string phone) {

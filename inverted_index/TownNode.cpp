@@ -39,7 +39,7 @@ void TownNode::clean() {
 }
 
 TownNode::~TownNode() {
-    cout << "Town node destroyed" << endl;
+//    cout << "Town node destroyed" << endl;
 }
 
 string TownNode::getTown() {

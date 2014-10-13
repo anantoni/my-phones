@@ -109,7 +109,6 @@ void InvertedIndexList::printInvoiceSum(string town) {
 }
 
 void InvertedIndexList::sort() {
-    cout << "sorting" << endl;
     TownNode *current = head;
     TownNode *next = head->next;
 

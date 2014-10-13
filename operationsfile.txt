@@ -8,11 +8,12 @@ i 6953938782 Theodoridis Malaina Sparta 62.00
 l 6947978769
 i 6966568052 Pugh Erika Rafina 50.00
 i 6955480929 Kay Melissa Cholargos 95.00
-t 3 
+t 3
 s Nafplio
 ft Nafplio 2
 fts
 min
+max
 l 6955480929
 d 6955480929
 d 6947978769

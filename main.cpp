@@ -36,18 +36,20 @@ int main(int argc, char** argv) {
         InvertedIndexList invertedIndex;
         Hash hash(10, &invertedIndex);
 
-        if (dataFile.compare(""))
+        if (dataFile.compare("")) {
             hash.loadDataFile(dataFile);
-
-        hash.printFirstNames();
+            cout << endl;
+        }
 
         if (operationsFile.compare("")) {
             ifstream ifs;
             ifs.open(operationsFile);
             if (!ifs.is_open())
                 cerr << "Operations file " << dataFile <<  " not found" << endl;
-            else
+            else {
                 hash.readFromStream(ifs);
+                cout << endl;
+            }
         }
 
         hash.readFromStream(cin);

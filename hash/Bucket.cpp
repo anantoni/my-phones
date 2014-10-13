@@ -70,13 +70,11 @@ void Bucket::printAllFirstNames() {
 }
 
 string Bucket::deleteRecord(string phone) {
-    cout << "Bucket::deleteRecord()" << endl;
     if (head == nullptr)
         return "";
 
     Record *current = head;
     if (!(head->getPhone().compare(phone))) {
-        cout << "first element" << endl;
         string town = head->getTown();
         delete head;
         head = current->next;
