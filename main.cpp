@@ -44,7 +44,10 @@ int main(int argc, char** argv) {
         if (operationsFile.compare("")) {
             ifstream ifs;
             ifs.open(operationsFile);
-            hash.readFromStream(ifs);
+            if (!ifs.is_open())
+                cerr << "Operations file " << dataFile <<  " not found" << endl;
+            else
+                hash.readFromStream(ifs);
         }
 
         hash.readFromStream(cin);

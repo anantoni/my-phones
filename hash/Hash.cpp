@@ -85,8 +85,8 @@ void Hash::printFirstNames() {
 void Hash::loadDataFile(string dataFile) {
     FILE *fpb = fopen(dataFile.c_str(), "rb");
     if (fpb == NULL) {
-        cerr << "Cannot open binary file " << dataFile << endl;
-        exit(EXIT_FAILURE);
+        cerr << "Data file " << dataFile << " not found" << endl;
+        return;
     }
 
     // check number of records
@@ -151,7 +151,6 @@ string* splitCommand(string line) {
 
         token = line.substr(0, pos);
         recordArgs[i] = token;
-        cout << token << endl;
         line.erase(0, pos + delimiter.length());
         i++;
     }
@@ -164,6 +163,8 @@ void Hash::readFromStream(istream &is) {
     string line;
     while(is) {
         getline(is, line);
+        if (is != cin)
+            cout << line << endl;
         if (line[0] == 'i' && line[1] == ' ') {
             string* recordArgs = splitCommand(line.substr(2));
             if (recordArgs == nullptr) {
