@@ -7,6 +7,7 @@ RecordPointer::RecordPointer(Record *record) {
 
 RecordPointer::~RecordPointer() {
 //    cout << "Record pointer deleted" << endl;
+    delete this->record;
 }
 
 void RecordPointer::setNext(RecordPointer *recordPointer) {

@@ -168,7 +168,7 @@ void Hash::readFromStream(istream &is) {
         if (is != cin)
             cout << line << endl;
         if (line[0] == 'i' && line[1] == ' ') {
-            string* recordArgs = splitCommand(line.substr(2));
+            string *recordArgs = splitCommand(line.substr(2));
             if (recordArgs == nullptr) {
                 cout << "Invalid insert command" << endl;
                 continue;
@@ -191,8 +191,9 @@ void Hash::readFromStream(istream &is) {
             string town = line.substr(2);
             invertedIndex->printInvoiceSum(town);
         }
-        else if (!(line.compare("e")))
+        else if (!(line.compare("e"))) {
             break;
+        }
         else if (!(line.compare("min")))
             cout << getMinPhoneNumber() << endl;
         else if (!(line.compare("max")))

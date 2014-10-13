@@ -6,13 +6,13 @@ Bucket::Bucket() {
 }
 
 Bucket::~Bucket() {
-    Record* current = head;
-    Record* next = nullptr;
-    while (current!= nullptr) {
-        next = current->next;
-        delete current;
-        current = next;
-    }
+//    Record* current = head;
+//    Record* next = nullptr;
+//    while (current!= nullptr) {
+//        next = current->next;
+//        delete current;
+//        current = next;
+//    }
 }
 
 bool Bucket::pushBack(Record* record) {
@@ -76,7 +76,6 @@ string Bucket::deleteRecord(string phone) {
     Record *current = head;
     if (!(head->getPhone().compare(phone))) {
         string town = head->getTown();
-        delete head;
         head = current->next;
         return town;
     }
@@ -85,7 +84,6 @@ string Bucket::deleteRecord(string phone) {
         if (!(current->next->getPhone().compare(phone))) {
             string town = current->next->getTown();
             current->next = current->next->next;
-            delete current->next;
             return town;
         }
         current = current->next;
