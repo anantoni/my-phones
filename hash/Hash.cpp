@@ -38,7 +38,6 @@ bool Hash::addRecord(Record *record) {
         invertedIndex->addRecord(record);
 
         long phone = atol(record->getPhone().c_str());
-        cout << phone << endl;
         if (phone > max)
             max = phone;
         if (phone < min || min == 0)
@@ -130,7 +129,6 @@ void Hash::updateMin() {
 void Hash::updateMax() {
     for (int i = 0; i < bucketNumber; i++) {
         long bucketMax = bucketList[i]->getBucketMax();
-        cout << bucketMax << endl;
         if (bucketMax != -1 && bucketMax > max)
             max = bucketMax;
     }

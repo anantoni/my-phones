@@ -22,10 +22,8 @@ bool Bucket::pushBack(Record* record) {
         return true;
     }
     else {
-        if (!(head->getPhone().compare(record->getPhone()))) {
-            cout << "Bucket::pushBack(Record &record) " << head->getPhone() << " " << record->getPhone() << endl;
+        if (!(head->getPhone().compare(record->getPhone())))
             return false;
-        }
         return pushBack(&(head->next), record);
     }
 }
@@ -37,10 +35,8 @@ bool Bucket::pushBack(Record **tail, Record* record) {
         return true;
     }
     else {
-        if (!((*tail)->getPhone().compare(record->getPhone()))) {
-            cout << "Bucket::pushBack(Record *tail, RecordRecord &record) " << (*tail)->getPhone() << " " << record->getPhone() << endl;
+        if (!((*tail)->getPhone().compare(record->getPhone())))
             return false;
-        }
         return pushBack(&((*tail)->next), record);
     }
 }

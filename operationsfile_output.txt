@@ -1,6 +1,5 @@
 i 6957303774 Kang Anastasia Nafplio 55.00
 Phone number 6957303774 added successfully
-6957303774
 
 l 6987773045
 Data file 6987773045 not found
@@ -13,26 +12,24 @@ Phone number 6957303774 deleted successfully.
 
 i 6957303774 Kang Anastasia Nafplio 155.00
 Phone number 6957303774 added successfully
-6957303774
+
+i 6957303774 Kang Anastasia Nafplio 155.00
+Record not added: Duplicate phone number exists.
 
 i 6947978769 Papandrea Delphina Livadeia 56.00
 Phone number 6947978769 added successfully
-6947978769
 
 i 6953938782 Theodoridis Malaina Sparta 62.00
 Phone number 6953938782 added successfully
-6953938782
 
 l 6947978769
 Data file 6947978769 not found
 
 i 6966568052 Pugh Erika Rafina 50.00
 Phone number 6966568052 added successfully
-6966568052
 
 i 6955480929 Kay Melissa Cholargos 95.00
 Phone number 6955480929 added successfully
-6955480929
 
 t 3
 Athens: 11
@@ -171,16 +168,6 @@ Phone number 6957303774 deleted successfully.
 
 d 6969988541
 Phone number 6969988541 deleted successfully.
-6966141083
-6967503751
-6969709522
-6969309982
-6969290783
-6968993056
-6969098350
-6967735382
-6969855957
-6967445081
 
 max
 6969855957
@@ -192,3 +179,5 @@ min
 6944690372
 
 e
+
+
