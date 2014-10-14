@@ -82,9 +82,8 @@ void TownNode::addRecord(Record *record) {
     while (current->next != nullptr && current->getRecord()->getInvoice() >= record->getInvoice())
         current = current->next;
 
-    current->next = new RecordPointer(record);
-    current->next->previous = current;
-    current->next->next = nullptr;
+    toBeAdded->next = current->next;
+    current->next = toBeAdded;
     this->population++;
     this->invoiceSum += record->getInvoice();
     return;
