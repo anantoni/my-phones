@@ -54,61 +54,60 @@ void TownNode::setNext(TownNode *townNode) {
     this->next = townNode;
 }
 
-void TownNode::addRecord(Record *record) {
-    if (head == nullptr) {
-        head = new RecordPointer(record);
-        head->next = nullptr;
-        head->previous = nullptr;
-        this->population++;
-        this->invoiceSum += record->getInvoice();
-    }
-    else {
-        RecordPointer *current = head;
-        while (record->getInvoice() < current->getRecord()->getInvoice()) {
-            if (current->next == nullptr) {
-                current->next = new RecordPointer(record);
-                current->next->previous = current;
-                current->next->next = nullptr;
-                this->population++;
-                this->invoiceSum += record->getInvoice();
-                return;
-            }
-            current = current->next;
-        }
 
-        RecordPointer *newNode = new RecordPointer(record);
-        if (current == head)
-            head = newNode;
-        if (current->previous != nullptr)
-            current->previous->next = newNode;
-        newNode->previous = current->previous;
-        current->previous = newNode;
-        newNode->next = current;
+
+/*if (topList == nullptr || topList->invoice < triple->invoice) {
+    triple->next = topList;
+    topList = triple;
+  }
+  else {
+    currentTop = topList;
+    while (currentTop->next != nullptr && currentTop->next->invoice >= triple->invoice) {
+        currentTop = currentTop->next;
+  }
+  triple->next = currentTop->next;
+  currentTop->next = triple;
+}*/
+void TownNode::addRecord(Record *record) {
+    RecordPointer *toBeAdded = new RecordPointer(record);
+    if (head == nullptr ||  head->getRecord()->getInvoice() < record->getInvoice()) {
+        toBeAdded->next = head;
+        head = toBeAdded;
         this->population++;
         this->invoiceSum += record->getInvoice();
+        return;
     }
+
+    RecordPointer *current = head;
+    while (current->next != nullptr && current->getRecord()->getInvoice() >= record->getInvoice())
+        current = current->next;
+
+    current->next = new RecordPointer(record);
+    current->next->previous = current;
+    current->next->next = nullptr;
+    this->population++;
+    this->invoiceSum += record->getInvoice();
+    return;
+
 }
 
 void TownNode::deleteRecord(string phone) {
-    RecordPointer *current = head;
-    int counter = 0;
 
-    while (current != nullptr) {
-        if (!(current->getRecord()->getPhone().compare(phone))) {
-            if (counter == 0) {
-                head = current->next;
-                if (head != nullptr)
-                    head->previous = nullptr;
-            }
-            else {
-                current->previous->next = current->next;
-                if (current->next != nullptr)
-                    current->next->previous = current->previous;
-            }
-            this->invoiceSum -= current->getRecord()->getInvoice();
-            delete current;
+    cout << head->getRecord()->getPhone() << endl;
+    if (!(head->getRecord()->getPhone().compare(phone))) {
+        RecordPointer *next = head->next;
+        delete head;
+        head = next;
+        return;
+    }
+
+    RecordPointer *current = head;
+    while (current->next != nullptr) {
+        if (!(current->next->getRecord()->getPhone().compare(phone))) {
+            RecordPointer *next = current->next;
+            current->next = next->next;
+            delete next;
         }
-        counter++;
         current = current->next;
     }
 }

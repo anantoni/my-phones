@@ -1,3 +1,50 @@
+fts
+ft Athens 5
+s Athens
+t 3
+min
+max
+i 6960196296 Makris Maurice Thessaloniki 48.00
+i 6948614858 Bullock Guy Rhodes 41.00
+i 6961468264 Evans Damaskinos Eleusina 126.00
+i 6954079694 Law Hieremias Edessa 85.00
+i 6948370923 Vitalis Lilika Drama 26.00
+i 6952746354 Peacock Juanita Galatsi 129.00
+i 6952546361 Morgan Robert Ermoupoli 9.00
+i 6947133572 Hansen Daphney NeaAlikarnassos 56.00
+i 6952685274 Wyatt Gary Serres 12.00
+i 6951808258 Stanley Nerissa Serres 45.00
+i 6965692547 Bouras Florence Athens 72.00
+i 6967420476 Stephens Connie Athens 18.00
+i 6959265292 Simmons Theresa Thessaloniki 97.00
+fts
+ft Athens 5
+s Athens
+t 3
+t 15
+min
+max
+d 6948614858
+d 6961468264
+d 6954079694
+d 6948370923
+d 6952746354
+d 6952546361
+d 6947133572
+d 6952685274
+d 6951808258
+d 6965692547
+d 6967420476
+d 6959265292
+d 6960196296
+d 6960196296
+fts
+ft Athens 5
+s Athens
+t 3
+min
+max
+l t200.bin
 i 6957303774 Kang Anastasia Nafplio 55.00
 l 6987773045
 ft Nafplio 5

@@ -141,7 +141,7 @@ void InvertedIndexList::printTopTowns(int k) {
 void InvertedIndexList::printTopSpenderPerTown() {
     TownNode *currentTown = head;
     Triple *topList = nullptr;
-    Triple *currentTop = topList;
+    Triple *currentTop = nullptr;
 
     while (currentTown != nullptr) {
         Triple *triple = new Triple(currentTown->getTown(),
