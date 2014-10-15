@@ -100,7 +100,7 @@ void Hash::loadDataFile(string dataFile) {
     //cout << "Records found in file " << numOfrecords << endl;
     for (int i = 0; i < numOfrecords; i++) {
         fread(&rec, sizeof(rec), 1, fpb);
-        printf("%s %s %s %s %-5.2f\n", rec.phone, rec.LastName, rec.FirstName, rec.Town, rec.invoice);
+//        printf("%s %s %s %s %-5.2f\n", rec.phone, rec.LastName, rec.FirstName, rec.Town, rec.invoice);
         Record *record = new Record(rec.phone, rec.LastName, rec.FirstName, rec.Town, rec.invoice);
         this->addRecord(record);
     }
@@ -164,7 +164,7 @@ void Hash::readFromStream(istream &is) {
     while(is) {
         getline(is, line);
         if (is != cin)
-            cout << line << endl;
+            cout << "myphones> " << line << endl;
         if (line[0] == 'i' && line[1] == ' ') {
             string *recordArgs = splitCommand(line.substr(2));
             if (recordArgs == nullptr) {

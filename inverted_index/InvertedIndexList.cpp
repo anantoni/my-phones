@@ -144,20 +144,21 @@ void InvertedIndexList::printTopSpenderPerTown() {
     Triple *currentTop = nullptr;
 
     while (currentTown != nullptr) {
-        Triple *triple = new Triple(currentTown->getTown(),
-                currentTown->head->getRecord()->getPhone(), currentTown->head->getRecord()->getInvoice());
+        if (currentTown->head != nullptr) {
+            Triple *triple = new Triple(currentTown->getTown(),
+                    currentTown->head->getRecord()->getPhone(), currentTown->head->getRecord()->getInvoice());
 
-        if (topList == nullptr || topList->invoice < triple->invoice) {
-            triple->next = topList;
-            topList = triple;
-        }
-        else {
-            currentTop = topList;
-            while (currentTop->next != nullptr && currentTop->next->invoice >= triple->invoice) {
-                currentTop = currentTop->next;
+            if (topList == nullptr || topList->invoice < triple->invoice) {
+                triple->next = topList;
+                topList = triple;
             }
-            triple->next = currentTop->next;
-            currentTop->next = triple;
+            else {
+                currentTop = topList;
+                while (currentTop->next != nullptr && currentTop->next->invoice >= triple->invoice)
+                    currentTop = currentTop->next;
+                triple->next = currentTop->next;
+                currentTop->next = triple;
+            }
         }
         currentTown = currentTown->next;
     }

@@ -8,7 +8,7 @@ TownNode::TownNode(string town) {
     this->head = nullptr;
     this->population = 0;
     this->next = nullptr;
-    this->invoiceSum;
+    this->invoiceSum = 0;
 }
 
 TownNode::TownNode(const TownNode &node) {
@@ -73,17 +73,16 @@ void TownNode::addRecord(Record *record) {
     if (head == nullptr ||  head->getRecord()->getInvoice() < record->getInvoice()) {
         toBeAdded->next = head;
         head = toBeAdded;
-        this->population++;
-        this->invoiceSum += record->getInvoice();
-        return;
     }
+    else {
+        RecordPointer *current = head;
+        while (current->next != nullptr && current->next->getRecord()->getInvoice() >= record->getInvoice())
+            current = current->next;
 
-    RecordPointer *current = head;
-    while (current->next != nullptr && current->getRecord()->getInvoice() >= record->getInvoice())
-        current = current->next;
+        toBeAdded->next = current->next;
+        current->next = toBeAdded;
 
-    toBeAdded->next = current->next;
-    current->next = toBeAdded;
+    }
     this->population++;
     this->invoiceSum += record->getInvoice();
     return;
@@ -92,11 +91,12 @@ void TownNode::addRecord(Record *record) {
 
 void TownNode::deleteRecord(string phone) {
 
-    cout << head->getRecord()->getPhone() << endl;
     if (!(head->getRecord()->getPhone().compare(phone))) {
         RecordPointer *next = head->next;
+        this->invoiceSum -= head->getRecord()->getInvoice();
         delete head;
         head = next;
+        this->population--;
         return;
     }
 
@@ -105,14 +105,17 @@ void TownNode::deleteRecord(string phone) {
         if (!(current->next->getRecord()->getPhone().compare(phone))) {
             RecordPointer *next = current->next;
             current->next = next->next;
+            this->invoiceSum -= next->getRecord()->getInvoice();
             delete next;
+            this->population--;
+            return;
         }
         current = current->next;
     }
 }
 
 void TownNode::printPopulation() {
-    cout << this->town << ":" << this->population << endl;
+    cout << this->town << ": " << this->population << endl;
 }
 
 void TownNode::printTownTopSpenders(int l) {
