@@ -130,6 +130,8 @@ void InvertedIndexList::sort() {
 
 void InvertedIndexList::printTopTowns(int k) {
     TownNode *current = head;
+    if (current == nullptr)
+        cout << "No towns found" << endl;
 
     while (current != nullptr && k > 0) {
         cout << current->getTown() << ": " << current->population << endl;
@@ -164,6 +166,10 @@ void InvertedIndexList::printTopSpenderPerTown() {
     }
 
     currentTop = topList;
+    if (currentTop == nullptr) {
+        cout << "No top spenders found." << endl;
+        return;
+    }
     while (currentTop != nullptr) {
         cout << currentTop->town << " " << currentTop->phoneno << " " << currentTop->invoice << endl;
         currentTop = currentTop->next;

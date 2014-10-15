@@ -120,22 +120,25 @@ d 6969988541
 max
 d 6944194787
 min
-i 6999999999 Kubrick Stanley Hertfordshire 1520.49
+p Athens
+s Athens
+p Thessaloniki
+s Thessaloniki
+i 6999999999 Kubrick Stanley Hertfordshire 1520.00
 i 6874837483 Inthemiddle Man Middle 89.00
-i 6911111111 Holmes Sherlock London 2.15
+i 6911111111 Holmes Sherlock London 2.00
+fts
+i 6912323211 Watson John London 82.00
+fts
+i 6912444411 Oliver John London 126.00
 p London
 p Hertfordshire
 s London
 s Hertfordshire
 t 20
-ft Athens 15
 fts
 min
 max
-p Athens
-s Athens
-p Thessaloniki
-s Thessaloniki
 d 6960094415
 d 6950507850
 d 6950369113
@@ -191,10 +194,10 @@ p Athens
 s Athens
 p Thessaloniki
 s Thessaloniki
-t 20
+t 100
 ft Athens 15
 fts
 min
 max
-i 6970783432 Lannister Tyrion Unknown 0.00
+
 e

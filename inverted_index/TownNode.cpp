@@ -120,6 +120,11 @@ void TownNode::printPopulation() {
 
 void TownNode::printTownTopSpenders(int l) {
     RecordPointer *current = head;
+    if (current == nullptr) {
+        cout << "No records found for given town" << endl;
+        return;
+    }
+
     while (current != nullptr && l > 0) {
         cout << current->getRecord()->getPhone() << " " << current->getRecord()->getInvoice() << endl;
         current = current->next;

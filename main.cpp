@@ -7,8 +7,6 @@
 
 using namespace std;
 
-
-
 int main(int argc, char** argv) {
 
     if (argc == 2) {
@@ -32,7 +30,8 @@ int main(int argc, char** argv) {
         }
         cout << endl;
         cout << "Datafile: " << dataFile << endl;
-
+        cout << "Operations file: " << operationsFile << endl;
+        cout << "Configuration file: " << configFile << endl << endl;
         InvertedIndexList invertedIndex;
         Hash hash(10, &invertedIndex);
 
