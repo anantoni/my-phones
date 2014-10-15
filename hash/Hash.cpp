@@ -171,7 +171,7 @@ void Hash::readFromStream(istream &is) {
                 cout << "Invalid insert command" << endl;
                 continue;
             }
-            Record *record = new Record(recordArgs[0], recordArgs[2], recordArgs[1],
+            Record *record = new Record(recordArgs[0], recordArgs[1], recordArgs[2],
                     recordArgs[3], atof(recordArgs[4].c_str()));
             addRecord(record);
             sortInvertedIndex();

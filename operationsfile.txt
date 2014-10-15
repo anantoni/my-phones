@@ -26,11 +26,15 @@ i 6923258743 Bouras Babis Athens 72.00
 i 6932732887 White Walter Athens 58.00
 i 6923254233 Strife Cloud Athens 88.00
 i 6932883734 Undewoord Francis Athens 87.00
+i 6944232322 Richards George Drama 145.00
+i 6944234334 Harrison James NeaAlikarnassos 123.00
 fts
 ft Athens 5
 ft Athens 10
+q 6944232322
 p Athens
 s Athens
+q 6967420476
 t 3
 t 15
 min
@@ -44,6 +48,7 @@ s Athens
 t 3
 t 15
 d 6928472842
+q 6928472842 
 fts
 ft Athens 5
 ft Athens 10
@@ -57,9 +62,15 @@ d 6954079694
 d 6948370923
 d 6952746354
 d 6952546361
+fts
+t 15
 d 6947133572
 d 6952685274
 d 6951808258
+d 6944234334
+fts
+t 15
+d 6944232322
 fts
 ft Athens 5
 ft Athens 10
@@ -190,6 +201,7 @@ d 6945843079
 d 6957715862
 d 6954139773
 d 6953113820
+q 6954139773
 p Athens
 s Athens
 p Thessaloniki
