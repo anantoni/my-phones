@@ -34,7 +34,7 @@ bool Hash::addRecord(Record *record) {
     int bucketSelection = selectBucket(record->getPhone());
 
     if (bucketList[bucketSelection]->pushBack(record) == true) {
-        cout << "Phone number " << record->getPhone() << " added successfully" << endl;
+        cout << "Phone number " << record->getPhone() << " added successfully." << endl;
         invertedIndex->addRecord(record);
 
         long phone = atol(record->getPhone().c_str());
@@ -85,7 +85,7 @@ void Hash::printFirstNames() {
 void Hash::loadDataFile(string dataFile) {
     FILE *fpb = fopen(dataFile.c_str(), "rb");
     if (fpb == NULL) {
-        cout << "Data file " << dataFile << " not found" << endl;
+        cout << "Data file " << dataFile << " not found." << endl;
         return;
     }
 
@@ -107,7 +107,7 @@ void Hash::loadDataFile(string dataFile) {
     fclose (fpb);
     invertedIndex->sort();
 //    invertedIndex->printPopulations();
-    cout << "Data file loaded successfully" << endl;
+    cout << "Data file loaded successfully." << endl;
 }
 
 long Hash::getMaxPhoneNumber() {

@@ -1,48 +1,718 @@
-i 6957303774 Kang Anastasia Nafplio 55.00
-Phone number 6957303774 added successfully
+myphones> fts
+No top spenders found.
 
-l 6987773045
-Data file 6987773045 not found
+myphones> ft Athens 5
+No records found for given town.
 
-ft Nafplio 5
-6957303774 55
+myphones> s Athens
+No records found for given town.
 
-d 6957303774
-Phone number 6957303774 deleted successfully.
+myphones> t 3
+No towns found
 
-i 6957303774 Kang Anastasia Nafplio 155.00
-Phone number 6957303774 added successfully
+myphones> min
+0
 
-i 6957303774 Kang Anastasia Nafplio 155.00
+myphones> max
+0
+
+myphones> i 6960196296 Makris Maurice Thessaloniki 48.00
+Phone number 6960196296 added successfully.
+
+myphones> i 6960196296 Makris Maurice Thessaloniki 48.00
 Record not added: Duplicate phone number exists.
 
-i 6947978769 Papandrea Delphina Livadeia 56.00
-Phone number 6947978769 added successfully
+myphones> i 6948614858 Bullock Guy Rhodes 41.00
+Phone number 6948614858 added successfully.
 
-i 6953938782 Theodoridis Malaina Sparta 62.00
-Phone number 6953938782 added successfully
+myphones> i 6961468264 Evans Damaskinos Eleusina 126.00
+Phone number 6961468264 added successfully.
 
-l 6947978769
-Data file 6947978769 not found
+myphones> i 6954079694 Law Hieremias Edessa 85.00
+Phone number 6954079694 added successfully.
 
-i 6966568052 Pugh Erika Rafina 50.00
-Phone number 6966568052 added successfully
+myphones> i 6948370923 Vitalis Lilika Drama 26.00
+Phone number 6948370923 added successfully.
 
-i 6955480929 Kay Melissa Cholargos 95.00
-Phone number 6955480929 added successfully
+myphones> i 6952746354 Peacock Juanita Galatsi 129.00
+Phone number 6952746354 added successfully.
 
-t 3
+myphones> i 6952546361 Morgan Robert Ermoupoli 9.00
+Phone number 6952546361 added successfully.
+
+myphones> i 6947133572 Hansen Daphney NeaAlikarnassos 56.00
+Phone number 6947133572 added successfully.
+
+myphones> i 6952685274 Wyatt Gary Serres 12.00
+Phone number 6952685274 added successfully.
+
+myphones> i 6951808258 Stanley Nerissa Serres 45.00
+Phone number 6951808258 added successfully.
+
+myphones> i 6965692547 Bouras Florence Athens 72.00
+Phone number 6965692547 added successfully.
+
+myphones> i 6967420476 Stephens Connie Athens 18.00
+Phone number 6967420476 added successfully.
+
+myphones> i 6932382733 Jackson Mixalis Serres 35.00
+Phone number 6932382733 added successfully.
+
+myphones> i 6959265292 Simmons Theresa Thessaloniki 97.00
+Phone number 6959265292 added successfully.
+
+myphones> i 6928472842 Tzortzakis Gavriil Athens 237.00
+Phone number 6928472842 added successfully.
+
+myphones> i 6922374873 Antoniadis Anastasios Athens 528.00
+Phone number 6922374873 added successfully.
+
+myphones> i 6987878777 Tade Efh Athens 68.00
+Phone number 6987878777 added successfully.
+
+myphones> i 6923258743 Bouras Babis Athens 72.00
+Phone number 6923258743 added successfully.
+
+myphones> i 6932732887 White Walter Athens 58.00
+Phone number 6932732887 added successfully.
+
+myphones> i 6923254233 Strife Cloud Athens 88.00
+Phone number 6923254233 added successfully.
+
+myphones> i 6932883734 Undewoord Francis Athens 87.00
+Phone number 6932883734 added successfully.
+
+myphones> i 6944232322 Richards George Drama 145.00
+Phone number 6944232322 added successfully.
+
+myphones> i 6944234334 Harrison James NeaAlikarnassos 123.00
+Phone number 6944234334 added successfully.
+
+myphones> fts
+Athens 6922374873 528
+Drama 6944232322 145
+Galatsi 6952746354 129
+Eleusina 6961468264 126
+NeaAlikarnassos 6944234334 123
+Thessaloniki 6959265292 97
+Edessa 6954079694 85
+Serres 6951808258 45
+Rhodes 6948614858 41
+Ermoupoli 6952546361 9
+
+myphones> ft Athens 5
+6922374873 528
+6928472842 237
+6923254233 88
+6932883734 87
+6965692547 72
+
+myphones> ft Athens 10
+6922374873 528
+6928472842 237
+6923254233 88
+6932883734 87
+6965692547 72
+6923258743 72
+6987878777 68
+6932732887 58
+6967420476 18
+
+myphones> q 6944232322
+6944232322 Richards George Drama 145
+
+myphones> p Athens
+Athens: 9
+
+myphones> s Athens
+Athens: 1228
+
+myphones> q 6967420476
+6967420476 Stephens Connie Athens 18
+
+myphones> t 3
+Athens: 9
+Serres: 3
+Thessaloniki: 2
+
+myphones> t 15
+Athens: 9
+Serres: 3
+Thessaloniki: 2
+Drama: 2
+NeaAlikarnassos: 2
+Galatsi: 1
+Ermoupoli: 1
+Edessa: 1
+Eleusina: 1
+Rhodes: 1
+
+myphones> min
+6922374873
+
+myphones> max
+6987878777
+
+myphones> d 6922374873
+Phone number 6922374873 deleted successfully.
+
+myphones> fts
+Athens 6928472842 237
+Drama 6944232322 145
+Galatsi 6952746354 129
+Eleusina 6961468264 126
+NeaAlikarnassos 6944234334 123
+Thessaloniki 6959265292 97
+Edessa 6954079694 85
+Serres 6951808258 45
+Rhodes 6948614858 41
+Ermoupoli 6952546361 9
+
+myphones> ft Athens 5
+6928472842 237
+6923254233 88
+6932883734 87
+6965692547 72
+6923258743 72
+
+myphones> ft Athens 10
+6928472842 237
+6923254233 88
+6932883734 87
+6965692547 72
+6923258743 72
+6987878777 68
+6932732887 58
+6967420476 18
+
+myphones> p Athens
+Athens: 8
+
+myphones> s Athens
+Athens: 700
+
+myphones> t 3
+Athens: 8
+Serres: 3
+Thessaloniki: 2
+
+myphones> t 15
+Athens: 8
+Serres: 3
+Thessaloniki: 2
+Drama: 2
+NeaAlikarnassos: 2
+Galatsi: 1
+Ermoupoli: 1
+Edessa: 1
+Eleusina: 1
+Rhodes: 1
+
+myphones> d 6928472842
+Phone number 6928472842 deleted successfully.
+
+myphones> q 6928472842 
+Phone number not found 
+
+myphones> fts
+Drama 6944232322 145
+Galatsi 6952746354 129
+Eleusina 6961468264 126
+NeaAlikarnassos 6944234334 123
+Thessaloniki 6959265292 97
+Athens 6923254233 88
+Edessa 6954079694 85
+Serres 6951808258 45
+Rhodes 6948614858 41
+Ermoupoli 6952546361 9
+
+myphones> ft Athens 5
+6923254233 88
+6932883734 87
+6965692547 72
+6923258743 72
+6987878777 68
+
+myphones> ft Athens 10
+6923254233 88
+6932883734 87
+6965692547 72
+6923258743 72
+6987878777 68
+6932732887 58
+6967420476 18
+
+myphones> p Athens
+Athens: 7
+
+myphones> s Athens
+Athens: 463
+
+myphones> t 3
+Athens: 7
+Serres: 3
+Thessaloniki: 2
+
+myphones> t 15
+Athens: 7
+Serres: 3
+Thessaloniki: 2
+Drama: 2
+NeaAlikarnassos: 2
+Galatsi: 1
+Ermoupoli: 1
+Edessa: 1
+Eleusina: 1
+Rhodes: 1
+
+myphones> d 6948614858
+Phone number 6948614858 deleted successfully.
+
+myphones> d 6961468264
+Phone number 6961468264 deleted successfully.
+
+myphones> d 6954079694
+Phone number 6954079694 deleted successfully.
+
+myphones> d 6948370923
+Phone number 6948370923 deleted successfully.
+
+myphones> d 6952746354
+Phone number 6952746354 deleted successfully.
+
+myphones> d 6952546361
+Phone number 6952546361 deleted successfully.
+
+myphones> fts
+Drama 6944232322 145
+NeaAlikarnassos 6944234334 123
+Thessaloniki 6959265292 97
+Athens 6923254233 88
+Serres 6951808258 45
+
+myphones> t 15
+Athens: 7
+Serres: 3
+Thessaloniki: 2
+NeaAlikarnassos: 2
+Drama: 1
+Ermoupoli: 0
+Galatsi: 0
+Edessa: 0
+Eleusina: 0
+Rhodes: 0
+
+myphones> d 6947133572
+Phone number 6947133572 deleted successfully.
+
+myphones> d 6952685274
+Phone number 6952685274 deleted successfully.
+
+myphones> d 6951808258
+Phone number 6951808258 deleted successfully.
+
+myphones> d 6944234334
+Phone number 6944234334 deleted successfully.
+
+myphones> fts
+Drama 6944232322 145
+Thessaloniki 6959265292 97
+Athens 6923254233 88
+Serres 6932382733 35
+
+myphones> t 15
+Athens: 7
+Thessaloniki: 2
+Serres: 1
+Drama: 1
+NeaAlikarnassos: 0
+Ermoupoli: 0
+Galatsi: 0
+Edessa: 0
+Eleusina: 0
+Rhodes: 0
+
+myphones> d 6944232322
+Phone number 6944232322 deleted successfully.
+
+myphones> fts
+Thessaloniki 6959265292 97
+Athens 6923254233 88
+Serres 6932382733 35
+
+myphones> ft Athens 5
+6923254233 88
+6932883734 87
+6965692547 72
+6923258743 72
+6987878777 68
+
+myphones> ft Athens 10
+6923254233 88
+6932883734 87
+6965692547 72
+6923258743 72
+6987878777 68
+6932732887 58
+6967420476 18
+
+myphones> s Athens
+Athens: 463
+
+myphones> t 3
+Athens: 7
+Thessaloniki: 2
+Serres: 1
+
+myphones> t 15
+Athens: 7
+Thessaloniki: 2
+Serres: 1
+Drama: 0
+NeaAlikarnassos: 0
+Ermoupoli: 0
+Galatsi: 0
+Edessa: 0
+Eleusina: 0
+Rhodes: 0
+
+myphones> max
+6987878777
+
+myphones> min
+6923254233
+
+myphones> s Ermoupoli
+Ermoupoli: 0
+
+myphones> s Thessaloniki
+Thessaloniki: 145
+
+myphones> ft Thessaloniki 5
+6959265292 97
+6960196296 48
+
+myphones> d 6965692547
+Phone number 6965692547 deleted successfully.
+
+myphones> d 6967420476
+Phone number 6967420476 deleted successfully.
+
+myphones> d 6959265292
+Phone number 6959265292 deleted successfully.
+
+myphones> d 6960196296
+Phone number 6960196296 deleted successfully.
+
+myphones> d 6960196296
+Phone number not found.
+
+myphones> d 6987878777
+Phone number 6987878777 deleted successfully.
+
+myphones> d 6923258743
+Phone number 6923258743 deleted successfully.
+
+myphones> d 6932732887
+Phone number 6932732887 deleted successfully.
+
+myphones> d 6923254233
+Phone number 6923254233 deleted successfully.
+
+myphones> d 6932883734
+Phone number 6932883734 deleted successfully.
+
+myphones> fts
+Serres 6932382733 35
+
+myphones> ft Athens 5
+No records found for given town
+
+myphones> s Athens
+Athens: 0
+
+myphones> t 3
+Serres: 1
+Athens: 0
+Thessaloniki: 0
+
+myphones> min
+6932382733
+
+myphones> max
+6932382733
+
+myphones> d 6932382733
+Phone number 6932382733 deleted successfully.
+
+myphones> fts
+No top spenders found.
+
+myphones> ft Athens 5
+No records found for given town
+
+myphones> s Athens
+Athens: 0
+
+myphones> t 3
+Serres: 0
+Athens: 0
+Thessaloniki: 0
+
+myphones> min
+0
+
+myphones> max
+0
+
+myphones> l t200.bin
+Phone number 6948614858 added successfully.
+Phone number 6961468264 added successfully.
+Phone number 6954079694 added successfully.
+Phone number 6948370923 added successfully.
+Phone number 6952746354 added successfully.
+Phone number 6952546361 added successfully.
+Phone number 6947133572 added successfully.
+Phone number 6952685274 added successfully.
+Phone number 6951808258 added successfully.
+Phone number 6957567858 added successfully.
+Phone number 6953966273 added successfully.
+Phone number 6964155494 added successfully.
+Phone number 6957176640 added successfully.
+Phone number 6946095630 added successfully.
+Phone number 6950227754 added successfully.
+Phone number 6948245684 added successfully.
+Phone number 6952316831 added successfully.
+Phone number 6948205611 added successfully.
+Phone number 6965694405 added successfully.
+Phone number 6965692547 added successfully.
+Phone number 6950078481 added successfully.
+Phone number 6959265292 added successfully.
+Phone number 6961746206 added successfully.
+Phone number 6958200705 added successfully.
+Phone number 6955930407 added successfully.
+Phone number 6951358800 added successfully.
+Phone number 6959207299 added successfully.
+Phone number 6955926153 added successfully.
+Phone number 6960538009 added successfully.
+Phone number 6969098350 added successfully.
+Phone number 6960196296 added successfully.
+Phone number 6963271331 added successfully.
+Phone number 6963887526 added successfully.
+Phone number 6967420476 added successfully.
+Phone number 6962679319 added successfully.
+Phone number 6956987959 added successfully.
+Phone number 6949177313 added successfully.
+Phone number 6967735382 added successfully.
+Phone number 6961079381 added successfully.
+Phone number 6959525947 added successfully.
+Phone number 6944986585 added successfully.
+Phone number 6962260421 added successfully.
+Phone number 6961919479 added successfully.
+Phone number 6960985705 added successfully.
+Phone number 6946839004 added successfully.
+Phone number 6953342128 added successfully.
+Phone number 6946306192 added successfully.
+Phone number 6958587250 added successfully.
+Phone number 6964812415 added successfully.
+Phone number 6963070885 added successfully.
+Phone number 6944690372 added successfully.
+Phone number 6961674613 added successfully.
+Phone number 6955235860 added successfully.
+Phone number 6965846524 added successfully.
+Phone number 6946054312 added successfully.
+Phone number 6954653852 added successfully.
+Phone number 6953777656 added successfully.
+Phone number 6951182543 added successfully.
+Phone number 6957983825 added successfully.
+Phone number 6954810032 added successfully.
+Phone number 6961853667 added successfully.
+Phone number 6946988030 added successfully.
+Phone number 6955697680 added successfully.
+Phone number 6951954294 added successfully.
+Phone number 6969309982 added successfully.
+Phone number 6965818032 added successfully.
+Phone number 6961621482 added successfully.
+Phone number 6966834834 added successfully.
+Phone number 6964907003 added successfully.
+Phone number 6960094415 added successfully.
+Phone number 6950507850 added successfully.
+Phone number 6950369113 added successfully.
+Phone number 6957165707 added successfully.
+Phone number 6961147948 added successfully.
+Phone number 6954405058 added successfully.
+Phone number 6954184844 added successfully.
+Phone number 6969771195 added successfully.
+Phone number 6964334382 added successfully.
+Phone number 6964096193 added successfully.
+Phone number 6967221980 added successfully.
+Phone number 6963472606 added successfully.
+Phone number 6959227760 added successfully.
+Phone number 6964187243 added successfully.
+Phone number 6954904835 added successfully.
+Phone number 6951089371 added successfully.
+Phone number 6958854672 added successfully.
+Phone number 6960924007 added successfully.
+Phone number 6962164961 added successfully.
+Phone number 6945163665 added successfully.
+Phone number 6948462122 added successfully.
+Phone number 6968326810 added successfully.
+Phone number 6950887484 added successfully.
+Phone number 6944194787 added successfully.
+Phone number 6947968584 added successfully.
+Phone number 6965405126 added successfully.
+Phone number 6964775616 added successfully.
+Phone number 6954098969 added successfully.
+Phone number 6961735424 added successfully.
+Phone number 6948758972 added successfully.
+Phone number 6955444815 added successfully.
+Phone number 6959455149 added successfully.
+Phone number 6967350656 added successfully.
+Phone number 6955322614 added successfully.
+Phone number 6964542136 added successfully.
+Phone number 6958297700 added successfully.
+Phone number 6955629356 added successfully.
+Phone number 6964381909 added successfully.
+Phone number 6951883640 added successfully.
+Phone number 6950086759 added successfully.
+Phone number 6962814311 added successfully.
+Phone number 6949864149 added successfully.
+Phone number 6956866219 added successfully.
+Phone number 6953525642 added successfully.
+Phone number 6965076189 added successfully.
+Phone number 6958877548 added successfully.
+Phone number 6969988541 added successfully.
+Phone number 6945843079 added successfully.
+Phone number 6957715862 added successfully.
+Phone number 6954139773 added successfully.
+Phone number 6953113820 added successfully.
+Phone number 6950397329 added successfully.
+Phone number 6946855260 added successfully.
+Phone number 6967445081 added successfully.
+Phone number 6953653327 added successfully.
+Phone number 6969709522 added successfully.
+Phone number 6967786807 added successfully.
+Phone number 6955176015 added successfully.
+Phone number 6951265216 added successfully.
+Phone number 6952139753 added successfully.
+Phone number 6947697325 added successfully.
+Phone number 6951929996 added successfully.
+Phone number 6957736077 added successfully.
+Phone number 6961103811 added successfully.
+Phone number 6965593593 added successfully.
+Phone number 6966141083 added successfully.
+Phone number 6952966953 added successfully.
+Phone number 6964912674 added successfully.
+Phone number 6952736407 added successfully.
+Phone number 6961017218 added successfully.
+Phone number 6949493974 added successfully.
+Phone number 6965024088 added successfully.
+Phone number 6944970502 added successfully.
+Phone number 6968536161 added successfully.
+Phone number 6958166951 added successfully.
+Phone number 6958630681 added successfully.
+Phone number 6957432298 added successfully.
+Phone number 6960875302 added successfully.
+Phone number 6957035978 added successfully.
+Phone number 6958191035 added successfully.
+Phone number 6969290783 added successfully.
+Phone number 6958321969 added successfully.
+Phone number 6963112289 added successfully.
+Phone number 6952367753 added successfully.
+Phone number 6953981404 added successfully.
+Phone number 6969855957 added successfully.
+Phone number 6967063436 added successfully.
+Phone number 6950757193 added successfully.
+Phone number 6962593214 added successfully.
+Phone number 6949720942 added successfully.
+Phone number 6968993056 added successfully.
+Phone number 6958965350 added successfully.
+Phone number 6949066533 added successfully.
+Phone number 6962953529 added successfully.
+Phone number 6961429611 added successfully.
+Phone number 6967503751 added successfully.
+Phone number 6952413338 added successfully.
+Phone number 6961810463 added successfully.
+Phone number 6952558374 added successfully.
+Phone number 6946259573 added successfully.
+Phone number 6962335486 added successfully.
+Phone number 6947460315 added successfully.
+Phone number 6956437345 added successfully.
+Phone number 6955597702 added successfully.
+Phone number 6962530329 added successfully.
+Phone number 6967623575 added successfully.
+Phone number 6962390119 added successfully.
+Phone number 6955234361 added successfully.
+Phone number 6968526500 added successfully.
+Phone number 6967780995 added successfully.
+Phone number 6946023453 added successfully.
+Phone number 6965843176 added successfully.
+Phone number 6948947229 added successfully.
+Phone number 6960896914 added successfully.
+Phone number 6948060987 added successfully.
+Phone number 6960780800 added successfully.
+Phone number 6963208768 added successfully.
+Phone number 6944870406 added successfully.
+Phone number 6947279288 added successfully.
+Phone number 6953691771 added successfully.
+Phone number 6956094283 added successfully.
+Phone number 6947092062 added successfully.
+Phone number 6960086297 added successfully.
+Phone number 6947719197 added successfully.
+Phone number 6951516975 added successfully.
+Phone number 6957531584 added successfully.
+Phone number 6969211184 added successfully.
+Phone number 6963238579 added successfully.
+Phone number 6957054322 added successfully.
+Phone number 6952077216 added successfully.
+Phone number 6956907738 added successfully.
+Data file loaded successfully.
+
+myphones> i 6957303774 Kang Anastasia Nafplio 55.00
+Phone number 6957303774 added successfully.
+
+myphones> l 6987773045
+Data file 6987773045 not found.
+
+myphones> ft Nafplio 5
+6957303774 55
+
+myphones> d 6957303774
+Phone number 6957303774 deleted successfully.
+
+myphones> i 6957303774 Kang Anastasia Nafplio 155.00
+Phone number 6957303774 added successfully.
+
+myphones> i 6957303774 Kang Anastasia Nafplio 155.00
+Record not added: Duplicate phone number exists.
+
+myphones> i 6947978769 Papandrea Delphina Livadeia 56.00
+Phone number 6947978769 added successfully.
+
+myphones> i 6953938782 Theodoridis Malaina Sparta 62.00
+Phone number 6953938782 added successfully.
+
+myphones> l 6947978769
+Data file 6947978769 not found.
+
+myphones> i 6966568052 Pugh Erika Rafina 50.00
+Phone number 6966568052 added successfully.
+
+myphones> i 6955480929 Kay Melissa Cholargos 95.00
+Phone number 6955480929 added successfully.
+
+myphones> t 3
 Athens: 11
 Thessaloniki: 9
 Peraias: 7
 
-s Nafplio
+myphones> s Nafplio
 Nafplio: 155
 
-ft Nafplio 2
+myphones> ft Nafplio 2
 6957303774 155
 
-fts
+myphones> fts
 Nafplio 6957303774 155
 Thessaloniki 6953113820 136
 Sparta 6960086297 136
@@ -117,8 +787,8 @@ Stavroupoli 6960896914 82
 Komotini 6961147948 81
 Tinos 6956094283 81
 Serres 6960538009 80
-Dafni 6967735382 78
 Perama 6953777656 78
+Dafni 6967735382 78
 Koropi 6969309982 71
 Heraklion 6953525642 71
 Ymittos 6967445081 67
@@ -128,16 +798,16 @@ Aspropyrgos 6964912674 66
 Katerini 6961735424 64
 Tavros 6963238579 58
 NeaErythraia 6953981404 56
-Kavala 6965405126 56
 NeaAlikarnassos 6947133572 56
+Kavala 6965405126 56
 Papagou 6948245684 55
 Paiania 6960780800 52
 Korydallos 6961621482 50
 Ptolemaida 6960094415 46
 Tripoli 6955930407 44
+Rhodes 6948614858 41
 Vyronas 6950507850 41
 Preveza 6961079381 41
-Rhodes 6948614858 41
 AgiaVarvara 6961674613 32
 Zavlani 6966834834 23
 Alexandreia 6959455149 23
@@ -148,36 +818,805 @@ Thebes 6954904835 15
 Rethymno 6957983825 11
 Metamorfosi 6964812415 9
 
-min
+myphones> min
 6944194787
 
-max
+myphones> max
 6969988541
 
-l 6955480929
-Data file 6955480929 not found
+myphones> l 6955480929
+Data file 6955480929 not found.
 
-d 6955480929
+myphones> d 6955480929
 Phone number 6955480929 deleted successfully.
 
-d 6947978769
+myphones> d 6947978769
 Phone number 6947978769 deleted successfully.
 
-d 6957303774
+myphones> d 6957303774
 Phone number 6957303774 deleted successfully.
 
-d 6969988541
+myphones> d 6969988541
 Phone number 6969988541 deleted successfully.
 
-max
+myphones> max
 6969855957
 
-d 6944194787
+myphones> d 6944194787
 Phone number 6944194787 deleted successfully.
 
-min
+myphones> min
 6944690372
 
-e
+myphones> p Athens
+Athens: 10
+
+myphones> s Athens
+Athens: 546
+
+myphones> p Thessaloniki
+Thessaloniki: 9
+
+myphones> s Thessaloniki
+Thessaloniki: 737
+
+myphones> i 6999999999 Kubrick Stanley Hertfordshire 1520.00
+Phone number 6999999999 added successfully.
+
+myphones> i 6874837483 Inthemiddle Man Middle 89.00
+Phone number 6874837483 added successfully.
+
+myphones> i 6911111111 Holmes Sherlock London 2.00
+Phone number 6911111111 added successfully.
+
+myphones> fts
+Hertfordshire 6999999999 1520
+Thessaloniki 6953113820 136
+Sparta 6960086297 136
+Xylokastro 6963208768 136
+Pylaia 6950397329 136
+Argyroupoli 6958191035 135
+Polichni 6969771195 131
+Grevena 6953342128 130
+Corinth 6959525947 129
+Galatsi 6952746354 129
+NeoPsychiko 6958854672 129
+Ellinikon 6945843079 128
+Peraias 6967623575 126
+NeaFiladelfeia 6955176015 126
+Eleusina 6961468264 126
+Pallini 6955322614 124
+Artemis 6965846524 124
+Nikaia 6958200705 122
+Vari 6962593214 122
+Piraeus 6955597702 121
+Chania 6952966953 121
+Ilioupoli 6963070885 120
+Xanthi 6959227760 120
+Larissa 6951929996 119
+Rafina 6962814311 118
+Nafpaktos 6963271331 117
+Kozani 6948462122 117
+Athens 6964775616 116
+Kaisariani 6951954294 116
+Efkarpia 6958877548 116
+Kilkis 6966141083 116
+Sykies 6952139753 115
+Pefki 6965818032 114
+Drapetsona 6954810032 113
+Ialysos 6947968584 113
+GlykaNera 6947460315 113
+Glyfada 6950757193 110
+Kos 6951265216 109
+Florina 6949493974 109
+Mandra 6947279288 109
+Patras 6969855957 108
+Ermoupoli 6952558374 107
+Petroupoli 6955629356 107
+PalaioFaliro 6954098969 106
+Nea 6961103811 105
+Chalcis 6951516975 104
+Ilio 6951089371 103
+Peristeri 6965024088 102
+Kallithea 6944970502 102
+Kalamaria 6950078481 100
+Neapoli 6947697325 99
+Naousa 6948060987 98
+Megara 6965593593 98
+Volos 6965843176 98
+Ierapetra 6954184844 97
+AgiaParaskevi 6956987959 96
+Giannitsa 6947719197 96
+Drama 6955444815 93
+Livadeia 6963887526 93
+Ampelokipoi 6955234361 91
+Verroia 6968526500 91
+AgiosDimitrios 6968993056 90
+Gerakas 6955926153 89
+Middle 6874837483 89
+Moschato 6951182543 86
+Orestiada 6969709522 86
+Edessa 6954079694 85
+Agrinio 6962390119 85
+Marousi 6961919479 83
+Kalamata 6969098350 82
+Stavroupoli 6960896914 82
+Komotini 6961147948 81
+Tinos 6956094283 81
+Serres 6960538009 80
+Perama 6953777656 78
+Dafni 6967735382 78
+Koropi 6969309982 71
+Heraklion 6953525642 71
+Ymittos 6967445081 67
+NeaSmyrni 6946855260 66
+Voula 6958321969 66
+Aspropyrgos 6964912674 66
+Katerini 6961735424 64
+Tavros 6963238579 58
+NeaErythraia 6953981404 56
+NeaAlikarnassos 6947133572 56
+Kavala 6965405126 56
+Papagou 6948245684 55
+Paiania 6960780800 52
+Cholargos 6951358800 50
+Korydallos 6961621482 50
+Ptolemaida 6960094415 46
+Tripoli 6955930407 44
+Rhodes 6948614858 41
+Vyronas 6950507850 41
+Preveza 6961079381 41
+AgiaVarvara 6961674613 32
+Zavlani 6966834834 23
+Alexandreia 6959455149 23
+Corfu 6968536161 19
+Pyrgos 6967221980 17
+Melissia 6954653852 17
+Thebes 6954904835 15
+Rethymno 6957983825 11
+Metamorfosi 6964812415 9
+London 6911111111 2
+
+myphones> i 6912323211 Watson John London 82.00
+Phone number 6912323211 added successfully.
+
+myphones> fts
+Hertfordshire 6999999999 1520
+Thessaloniki 6953113820 136
+Sparta 6960086297 136
+Xylokastro 6963208768 136
+Pylaia 6950397329 136
+Argyroupoli 6958191035 135
+Polichni 6969771195 131
+Grevena 6953342128 130
+Corinth 6959525947 129
+Galatsi 6952746354 129
+NeoPsychiko 6958854672 129
+Ellinikon 6945843079 128
+Peraias 6967623575 126
+NeaFiladelfeia 6955176015 126
+Eleusina 6961468264 126
+Pallini 6955322614 124
+Artemis 6965846524 124
+Nikaia 6958200705 122
+Vari 6962593214 122
+Piraeus 6955597702 121
+Chania 6952966953 121
+Ilioupoli 6963070885 120
+Xanthi 6959227760 120
+Larissa 6951929996 119
+Rafina 6962814311 118
+Nafpaktos 6963271331 117
+Kozani 6948462122 117
+Athens 6964775616 116
+Kaisariani 6951954294 116
+Efkarpia 6958877548 116
+Kilkis 6966141083 116
+Sykies 6952139753 115
+Pefki 6965818032 114
+Drapetsona 6954810032 113
+Ialysos 6947968584 113
+GlykaNera 6947460315 113
+Glyfada 6950757193 110
+Kos 6951265216 109
+Florina 6949493974 109
+Mandra 6947279288 109
+Patras 6969855957 108
+Ermoupoli 6952558374 107
+Petroupoli 6955629356 107
+PalaioFaliro 6954098969 106
+Nea 6961103811 105
+Chalcis 6951516975 104
+Ilio 6951089371 103
+Peristeri 6965024088 102
+Kallithea 6944970502 102
+Kalamaria 6950078481 100
+Neapoli 6947697325 99
+Naousa 6948060987 98
+Megara 6965593593 98
+Volos 6965843176 98
+Ierapetra 6954184844 97
+AgiaParaskevi 6956987959 96
+Giannitsa 6947719197 96
+Drama 6955444815 93
+Livadeia 6963887526 93
+Ampelokipoi 6955234361 91
+Verroia 6968526500 91
+AgiosDimitrios 6968993056 90
+Gerakas 6955926153 89
+Middle 6874837483 89
+Moschato 6951182543 86
+Orestiada 6969709522 86
+Edessa 6954079694 85
+Agrinio 6962390119 85
+Marousi 6961919479 83
+Kalamata 6969098350 82
+Stavroupoli 6960896914 82
+London 6912323211 82
+Komotini 6961147948 81
+Tinos 6956094283 81
+Serres 6960538009 80
+Perama 6953777656 78
+Dafni 6967735382 78
+Koropi 6969309982 71
+Heraklion 6953525642 71
+Ymittos 6967445081 67
+NeaSmyrni 6946855260 66
+Voula 6958321969 66
+Aspropyrgos 6964912674 66
+Katerini 6961735424 64
+Tavros 6963238579 58
+NeaErythraia 6953981404 56
+NeaAlikarnassos 6947133572 56
+Kavala 6965405126 56
+Papagou 6948245684 55
+Paiania 6960780800 52
+Cholargos 6951358800 50
+Korydallos 6961621482 50
+Ptolemaida 6960094415 46
+Tripoli 6955930407 44
+Rhodes 6948614858 41
+Vyronas 6950507850 41
+Preveza 6961079381 41
+AgiaVarvara 6961674613 32
+Zavlani 6966834834 23
+Alexandreia 6959455149 23
+Corfu 6968536161 19
+Pyrgos 6967221980 17
+Melissia 6954653852 17
+Thebes 6954904835 15
+Rethymno 6957983825 11
+Metamorfosi 6964812415 9
+
+myphones> i 6912444411 Oliver John London 126.00
+Phone number 6912444411 added successfully.
+
+myphones> p London
+London: 3
+
+myphones> p Hertfordshire
+Hertfordshire: 1
+
+myphones> s London
+London: 210
+
+myphones> s Hertfordshire
+Hertfordshire: 1520
+
+myphones> t 20
+Athens: 10
+Thessaloniki: 9
+Peraias: 7
+NeaSmyrni: 6
+Gerakas: 5
+Glyfada: 5
+Larissa: 5
+Cholargos: 4
+Corinth: 4
+Serres: 4
+Piraeus: 4
+PalaioFaliro: 4
+Ellinikon: 4
+Ampelokipoi: 3
+Marousi: 3
+Peristeri: 3
+Galatsi: 3
+Ilio: 3
+Pallini: 3
+Patras: 3
+
+myphones> fts
+Hertfordshire 6999999999 1520
+Thessaloniki 6953113820 136
+Sparta 6960086297 136
+Xylokastro 6963208768 136
+Pylaia 6950397329 136
+Argyroupoli 6958191035 135
+Polichni 6969771195 131
+Grevena 6953342128 130
+Corinth 6959525947 129
+Galatsi 6952746354 129
+NeoPsychiko 6958854672 129
+Ellinikon 6945843079 128
+Peraias 6967623575 126
+London 6912444411 126
+NeaFiladelfeia 6955176015 126
+Eleusina 6961468264 126
+Pallini 6955322614 124
+Artemis 6965846524 124
+Nikaia 6958200705 122
+Vari 6962593214 122
+Piraeus 6955597702 121
+Chania 6952966953 121
+Ilioupoli 6963070885 120
+Xanthi 6959227760 120
+Larissa 6951929996 119
+Rafina 6962814311 118
+Nafpaktos 6963271331 117
+Kozani 6948462122 117
+Athens 6964775616 116
+Kaisariani 6951954294 116
+Efkarpia 6958877548 116
+Kilkis 6966141083 116
+Sykies 6952139753 115
+Pefki 6965818032 114
+Drapetsona 6954810032 113
+Ialysos 6947968584 113
+GlykaNera 6947460315 113
+Glyfada 6950757193 110
+Kos 6951265216 109
+Florina 6949493974 109
+Mandra 6947279288 109
+Patras 6969855957 108
+Ermoupoli 6952558374 107
+Petroupoli 6955629356 107
+PalaioFaliro 6954098969 106
+Nea 6961103811 105
+Chalcis 6951516975 104
+Ilio 6951089371 103
+Peristeri 6965024088 102
+Kallithea 6944970502 102
+Kalamaria 6950078481 100
+Neapoli 6947697325 99
+Naousa 6948060987 98
+Megara 6965593593 98
+Volos 6965843176 98
+Ierapetra 6954184844 97
+AgiaParaskevi 6956987959 96
+Giannitsa 6947719197 96
+Drama 6955444815 93
+Livadeia 6963887526 93
+Ampelokipoi 6955234361 91
+Verroia 6968526500 91
+AgiosDimitrios 6968993056 90
+Gerakas 6955926153 89
+Middle 6874837483 89
+Moschato 6951182543 86
+Orestiada 6969709522 86
+Edessa 6954079694 85
+Agrinio 6962390119 85
+Marousi 6961919479 83
+Kalamata 6969098350 82
+Stavroupoli 6960896914 82
+Komotini 6961147948 81
+Tinos 6956094283 81
+Serres 6960538009 80
+Perama 6953777656 78
+Dafni 6967735382 78
+Koropi 6969309982 71
+Heraklion 6953525642 71
+Ymittos 6967445081 67
+NeaSmyrni 6946855260 66
+Voula 6958321969 66
+Aspropyrgos 6964912674 66
+Katerini 6961735424 64
+Tavros 6963238579 58
+NeaErythraia 6953981404 56
+NeaAlikarnassos 6947133572 56
+Kavala 6965405126 56
+Papagou 6948245684 55
+Paiania 6960780800 52
+Cholargos 6951358800 50
+Korydallos 6961621482 50
+Ptolemaida 6960094415 46
+Tripoli 6955930407 44
+Rhodes 6948614858 41
+Vyronas 6950507850 41
+Preveza 6961079381 41
+AgiaVarvara 6961674613 32
+Zavlani 6966834834 23
+Alexandreia 6959455149 23
+Corfu 6968536161 19
+Pyrgos 6967221980 17
+Melissia 6954653852 17
+Thebes 6954904835 15
+Rethymno 6957983825 11
+Metamorfosi 6964812415 9
+
+myphones> min
+6874837483
+
+myphones> max
+6999999999
+
+myphones> d 6960094415
+Phone number 6960094415 deleted successfully.
+
+myphones> d 6950507850
+Phone number 6950507850 deleted successfully.
+
+myphones> d 6950369113
+Phone number 6950369113 deleted successfully.
+
+myphones> d 6957165707
+Phone number 6957165707 deleted successfully.
+
+myphones> d 6961147948
+Phone number 6961147948 deleted successfully.
+
+myphones> d 6954405058
+Phone number 6954405058 deleted successfully.
+
+myphones> d 6954184844
+Phone number 6954184844 deleted successfully.
+
+myphones> d 6969771195
+Phone number 6969771195 deleted successfully.
+
+myphones> d 6964334382
+Phone number 6964334382 deleted successfully.
+
+myphones> d 6964096193
+Phone number 6964096193 deleted successfully.
+
+myphones> d 6967221980
+Phone number 6967221980 deleted successfully.
+
+myphones> d 6963472606
+Phone number 6963472606 deleted successfully.
+
+myphones> d 6959227760
+Phone number 6959227760 deleted successfully.
+
+myphones> d 6964187243
+Phone number 6964187243 deleted successfully.
+
+myphones> d 6954904835
+Phone number 6954904835 deleted successfully.
+
+myphones> d 6951089371
+Phone number 6951089371 deleted successfully.
+
+myphones> d 6958854672
+Phone number 6958854672 deleted successfully.
+
+myphones> d 6960924007
+Phone number 6960924007 deleted successfully.
+
+myphones> d 6962164961
+Phone number 6962164961 deleted successfully.
+
+myphones> d 6945163665
+Phone number 6945163665 deleted successfully.
+
+myphones> d 6948462122
+Phone number 6948462122 deleted successfully.
+
+myphones> d 6968326810
+Phone number 6968326810 deleted successfully.
+
+myphones> d 6950887484
+Phone number 6950887484 deleted successfully.
+
+myphones> d 6944194787
+Phone number not found.
+
+myphones> d 6947968584
+Phone number 6947968584 deleted successfully.
+
+myphones> d 6965405126
+Phone number 6965405126 deleted successfully.
+
+myphones> d 6964775616
+Phone number 6964775616 deleted successfully.
+
+myphones> d 6954098969
+Phone number 6954098969 deleted successfully.
+
+myphones> d 6961735424
+Phone number 6961735424 deleted successfully.
+
+myphones> d 6948758972
+Phone number 6948758972 deleted successfully.
+
+myphones> d 6955444815
+Phone number 6955444815 deleted successfully.
+
+myphones> d 6959455149
+Phone number 6959455149 deleted successfully.
+
+myphones> d 6967350656
+Phone number 6967350656 deleted successfully.
+
+myphones> d 6955322614
+Phone number 6955322614 deleted successfully.
+
+myphones> d 6964542136
+Phone number 6964542136 deleted successfully.
+
+myphones> d 6958297700
+Phone number 6958297700 deleted successfully.
+
+myphones> d 6955629356
+Phone number 6955629356 deleted successfully.
+
+myphones> d 6964381909
+Phone number 6964381909 deleted successfully.
+
+myphones> d 6951883640
+Phone number 6951883640 deleted successfully.
+
+myphones> d 6950086759
+Phone number 6950086759 deleted successfully.
+
+myphones> d 6962814311
+Phone number 6962814311 deleted successfully.
+
+myphones> d 6949864149
+Phone number 6949864149 deleted successfully.
+
+myphones> d 6956866219
+Phone number 6956866219 deleted successfully.
+
+myphones> d 6953525642
+Phone number 6953525642 deleted successfully.
+
+myphones> d 6965076189
+Phone number 6965076189 deleted successfully.
+
+myphones> d 6958877548
+Phone number 6958877548 deleted successfully.
+
+myphones> d 6969988541
+Phone number not found.
+
+myphones> d 6945843079
+Phone number 6945843079 deleted successfully.
+
+myphones> d 6957715862
+Phone number 6957715862 deleted successfully.
+
+myphones> d 6954139773
+Phone number 6954139773 deleted successfully.
+
+myphones> d 6953113820
+Phone number 6953113820 deleted successfully.
+
+myphones> q 6954139773
+Phone number not found 
+
+myphones> p Athens
+Athens: 7
+
+myphones> s Athens
+Athens: 299
+
+myphones> p Thessaloniki
+Thessaloniki: 8
+
+myphones> s Thessaloniki
+Thessaloniki: 601
+
+myphones> t 100
+Thessaloniki: 8
+Athens: 7
+Peraias: 6
+NeaSmyrni: 6
+Gerakas: 5
+Glyfada: 4
+Piraeus: 4
+Cholargos: 3
+Larissa: 3
+Serres: 3
+Peristeri: 3
+Galatsi: 3
+Patras: 3
+Chalcis: 3
+London: 3
+Corinth: 2
+Rafina: 2
+Marousi: 2
+PalaioFaliro: 2
+Sparta: 2
+Ilio: 2
+Ampelokipoi: 2
+Ermoupoli: 2
+AgiaParaskevi: 2
+Pefki: 2
+Nafpaktos: 2
+Kos: 2
+AgiaVarvara: 2
+Kalamata: 2
+Voula: 2
+AgiosDimitrios: 2
+Stavroupoli: 2
+Tavros: 2
+Ilioupoli: 2
+Moschato: 1
+Xylokastro: 1
+NeaErythraia: 1
+Drama: 1
+NeoPsychiko: 1
+Naousa: 1
+Rhodes: 1
+Rethymno: 1
+Drapetsona: 1
+Perama: 1
+Kaisariani: 1
+Koropi: 1
+Kalamaria: 1
+Korydallos: 1
+Zavlani: 1
+Dafni: 1
+Preveza: 1
+NeaAlikarnassos: 1
+Nikaia: 1
+Tripoli: 1
+Edessa: 1
+Grevena: 1
+Pylaia: 1
+Ymittos: 1
+Orestiada: 1
+NeaFiladelfeia: 1
+Sykies: 1
+Neapoli: 1
+Nea: 1
+Megara: 1
+Kilkis: 1
+Chania: 1
+Aspropyrgos: 1
+Florina: 1
+Kallithea: 1
+Corfu: 1
+Papagou: 1
+Argyroupoli: 1
+Metamorfosi: 1
+Eleusina: 1
+Vari: 1
+GlykaNera: 1
+Agrinio: 1
+Verroia: 1
+Volos: 1
+Artemis: 1
+Paiania: 1
+Mandra: 1
+Tinos: 1
+Giannitsa: 1
+Melissia: 1
+Hertfordshire: 1
+Middle: 1
+Livadeia: 1
+Ellinikon: 0
+Efkarpia: 0
+Heraklion: 0
+Petroupoli: 0
+Pallini: 0
+Alexandreia: 0
+Katerini: 0
+Kavala: 0
+Ialysos: 0
+Kozani: 0
+Thebes: 0
+Xanthi: 0
+
+myphones> ft Athens 15
+6949066533 88
+6965692547 72
+6953691771 40
+6956907738 40
+6958166951 21
+6961853667 20
+6967420476 18
+
+myphones> fts
+Hertfordshire 6999999999 1520
+Sparta 6960086297 136
+Xylokastro 6963208768 136
+Pylaia 6950397329 136
+Argyroupoli 6958191035 135
+Grevena 6953342128 130
+Thessaloniki 6946023453 129
+Galatsi 6952746354 129
+Corinth 6959525947 129
+Peraias 6967623575 126
+London 6912444411 126
+NeaFiladelfeia 6955176015 126
+Eleusina 6961468264 126
+Artemis 6965846524 124
+Nikaia 6958200705 122
+Vari 6962593214 122
+Piraeus 6955597702 121
+Chania 6952966953 121
+Ilioupoli 6963070885 120
+Larissa 6951929996 119
+Nafpaktos 6963271331 117
+Kaisariani 6951954294 116
+Kilkis 6966141083 116
+Sykies 6952139753 115
+Pefki 6965818032 114
+Drapetsona 6954810032 113
+GlykaNera 6947460315 113
+Glyfada 6950757193 110
+Kos 6951265216 109
+Florina 6949493974 109
+Mandra 6947279288 109
+Patras 6969855957 108
+Ermoupoli 6952558374 107
+Nea 6961103811 105
+Chalcis 6951516975 104
+Peristeri 6965024088 102
+Kallithea 6944970502 102
+Kalamaria 6950078481 100
+Neapoli 6947697325 99
+Naousa 6948060987 98
+Megara 6965593593 98
+Volos 6965843176 98
+AgiaParaskevi 6956987959 96
+Giannitsa 6947719197 96
+Livadeia 6963887526 93
+Ampelokipoi 6955234361 91
+Verroia 6968526500 91
+AgiosDimitrios 6968993056 90
+Gerakas 6955926153 89
+Middle 6874837483 89
+Athens 6949066533 88
+Moschato 6951182543 86
+Orestiada 6969709522 86
+Edessa 6954079694 85
+Agrinio 6962390119 85
+Marousi 6961919479 83
+Kalamata 6969098350 82
+Stavroupoli 6960896914 82
+Tinos 6956094283 81
+Serres 6960538009 80
+Ilio 6967786807 80
+Perama 6953777656 78
+Dafni 6967735382 78
+PalaioFaliro 6964155494 73
+Koropi 6969309982 71
+Ymittos 6967445081 67
+NeaSmyrni 6946855260 66
+Voula 6958321969 66
+Aspropyrgos 6964912674 66
+Tavros 6963238579 58
+Rafina 6946095630 56
+NeaErythraia 6953981404 56
+NeaAlikarnassos 6947133572 56
+Papagou 6948245684 55
+Paiania 6960780800 52
+Cholargos 6951358800 50
+Korydallos 6961621482 50
+Tripoli 6955930407 44
+Rhodes 6948614858 41
+Preveza 6961079381 41
+AgiaVarvara 6961674613 32
+Drama 6948370923 26
+Zavlani 6966834834 23
+Corfu 6968536161 19
+Melissia 6954653852 17
+NeoPsychiko 6952736407 16
+Rethymno 6957983825 11
+Metamorfosi 6964812415 9
+
+myphones> min
+6874837483
+
+myphones> max
+6999999999
+
+myphones> 
+Invalid command
+
+myphones> e
 
 
