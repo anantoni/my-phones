@@ -1,5 +1,4 @@
-os-f14-prj1-implementation
+Fall 2014 - OS Project 1
 ==========================
 
-Still under construction:
-TODO: 9 and read commands from operations file.
+
