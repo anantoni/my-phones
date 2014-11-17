@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anantoni/ClionProjects/OS-F14-Prj1
+CMAKE_SOURCE_DIR = /home/anantoni/ClionProjects/os-f14-prj1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anantoni/ClionProjects/OS-F14-Prj1
+CMAKE_BINARY_DIR = /home/anantoni/ClionProjects/os-f14-prj1
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anantoni/ClionProjects/OS-F14-Prj1/CMakeFiles /home/anantoni/ClionProjects/OS-F14-Prj1/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anantoni/ClionProjects/os-f14-prj1/CMakeFiles /home/anantoni/ClionProjects/os-f14-prj1/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anantoni/ClionProjects/OS-F14-Prj1/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anantoni/ClionProjects/os-f14-prj1/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,149 +111,173 @@ OS_F14_Prj1/fast:
 	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/build
 .PHONY : OS_F14_Prj1/fast
 
-hash/Bucket.o: hash/Bucket.cpp.o
-.PHONY : hash/Bucket.o
+Bucket.o: Bucket.cpp.o
+.PHONY : Bucket.o
 
 # target to build an object file
-hash/Bucket.cpp.o:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/hash/Bucket.cpp.o
-.PHONY : hash/Bucket.cpp.o
+Bucket.cpp.o:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/Bucket.cpp.o
+.PHONY : Bucket.cpp.o
 
-hash/Bucket.i: hash/Bucket.cpp.i
-.PHONY : hash/Bucket.i
+Bucket.i: Bucket.cpp.i
+.PHONY : Bucket.i
 
 # target to preprocess a source file
-hash/Bucket.cpp.i:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/hash/Bucket.cpp.i
-.PHONY : hash/Bucket.cpp.i
+Bucket.cpp.i:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/Bucket.cpp.i
+.PHONY : Bucket.cpp.i
 
-hash/Bucket.s: hash/Bucket.cpp.s
-.PHONY : hash/Bucket.s
+Bucket.s: Bucket.cpp.s
+.PHONY : Bucket.s
 
 # target to generate assembly for a file
-hash/Bucket.cpp.s:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/hash/Bucket.cpp.s
-.PHONY : hash/Bucket.cpp.s
+Bucket.cpp.s:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/Bucket.cpp.s
+.PHONY : Bucket.cpp.s
 
-hash/Hash.o: hash/Hash.cpp.o
-.PHONY : hash/Hash.o
+Hash.o: Hash.cpp.o
+.PHONY : Hash.o
 
 # target to build an object file
-hash/Hash.cpp.o:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/hash/Hash.cpp.o
-.PHONY : hash/Hash.cpp.o
+Hash.cpp.o:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/Hash.cpp.o
+.PHONY : Hash.cpp.o
 
-hash/Hash.i: hash/Hash.cpp.i
-.PHONY : hash/Hash.i
+Hash.i: Hash.cpp.i
+.PHONY : Hash.i
 
 # target to preprocess a source file
-hash/Hash.cpp.i:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/hash/Hash.cpp.i
-.PHONY : hash/Hash.cpp.i
+Hash.cpp.i:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/Hash.cpp.i
+.PHONY : Hash.cpp.i
 
-hash/Hash.s: hash/Hash.cpp.s
-.PHONY : hash/Hash.s
+Hash.s: Hash.cpp.s
+.PHONY : Hash.s
 
 # target to generate assembly for a file
-hash/Hash.cpp.s:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/hash/Hash.cpp.s
-.PHONY : hash/Hash.cpp.s
+Hash.cpp.s:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/Hash.cpp.s
+.PHONY : Hash.cpp.s
 
-inverted_index/InvertedIndexList.o: inverted_index/InvertedIndexList.cpp.o
-.PHONY : inverted_index/InvertedIndexList.o
+InvertedIndexList.o: InvertedIndexList.cpp.o
+.PHONY : InvertedIndexList.o
 
 # target to build an object file
-inverted_index/InvertedIndexList.cpp.o:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/inverted_index/InvertedIndexList.cpp.o
-.PHONY : inverted_index/InvertedIndexList.cpp.o
+InvertedIndexList.cpp.o:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/InvertedIndexList.cpp.o
+.PHONY : InvertedIndexList.cpp.o
 
-inverted_index/InvertedIndexList.i: inverted_index/InvertedIndexList.cpp.i
-.PHONY : inverted_index/InvertedIndexList.i
+InvertedIndexList.i: InvertedIndexList.cpp.i
+.PHONY : InvertedIndexList.i
 
 # target to preprocess a source file
-inverted_index/InvertedIndexList.cpp.i:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/inverted_index/InvertedIndexList.cpp.i
-.PHONY : inverted_index/InvertedIndexList.cpp.i
+InvertedIndexList.cpp.i:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/InvertedIndexList.cpp.i
+.PHONY : InvertedIndexList.cpp.i
 
-inverted_index/InvertedIndexList.s: inverted_index/InvertedIndexList.cpp.s
-.PHONY : inverted_index/InvertedIndexList.s
+InvertedIndexList.s: InvertedIndexList.cpp.s
+.PHONY : InvertedIndexList.s
 
 # target to generate assembly for a file
-inverted_index/InvertedIndexList.cpp.s:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/inverted_index/InvertedIndexList.cpp.s
-.PHONY : inverted_index/InvertedIndexList.cpp.s
+InvertedIndexList.cpp.s:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/InvertedIndexList.cpp.s
+.PHONY : InvertedIndexList.cpp.s
 
-inverted_index/RecordPointer.o: inverted_index/RecordPointer.cpp.o
-.PHONY : inverted_index/RecordPointer.o
+Record.o: Record.cpp.o
+.PHONY : Record.o
 
 # target to build an object file
-inverted_index/RecordPointer.cpp.o:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/inverted_index/RecordPointer.cpp.o
-.PHONY : inverted_index/RecordPointer.cpp.o
+Record.cpp.o:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/Record.cpp.o
+.PHONY : Record.cpp.o
 
-inverted_index/RecordPointer.i: inverted_index/RecordPointer.cpp.i
-.PHONY : inverted_index/RecordPointer.i
+Record.i: Record.cpp.i
+.PHONY : Record.i
 
 # target to preprocess a source file
-inverted_index/RecordPointer.cpp.i:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/inverted_index/RecordPointer.cpp.i
-.PHONY : inverted_index/RecordPointer.cpp.i
+Record.cpp.i:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/Record.cpp.i
+.PHONY : Record.cpp.i
 
-inverted_index/RecordPointer.s: inverted_index/RecordPointer.cpp.s
-.PHONY : inverted_index/RecordPointer.s
+Record.s: Record.cpp.s
+.PHONY : Record.s
 
 # target to generate assembly for a file
-inverted_index/RecordPointer.cpp.s:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/inverted_index/RecordPointer.cpp.s
-.PHONY : inverted_index/RecordPointer.cpp.s
+Record.cpp.s:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/Record.cpp.s
+.PHONY : Record.cpp.s
 
-inverted_index/TownNode.o: inverted_index/TownNode.cpp.o
-.PHONY : inverted_index/TownNode.o
+RecordPointer.o: RecordPointer.cpp.o
+.PHONY : RecordPointer.o
 
 # target to build an object file
-inverted_index/TownNode.cpp.o:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/inverted_index/TownNode.cpp.o
-.PHONY : inverted_index/TownNode.cpp.o
+RecordPointer.cpp.o:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/RecordPointer.cpp.o
+.PHONY : RecordPointer.cpp.o
 
-inverted_index/TownNode.i: inverted_index/TownNode.cpp.i
-.PHONY : inverted_index/TownNode.i
+RecordPointer.i: RecordPointer.cpp.i
+.PHONY : RecordPointer.i
 
 # target to preprocess a source file
-inverted_index/TownNode.cpp.i:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/inverted_index/TownNode.cpp.i
-.PHONY : inverted_index/TownNode.cpp.i
+RecordPointer.cpp.i:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/RecordPointer.cpp.i
+.PHONY : RecordPointer.cpp.i
 
-inverted_index/TownNode.s: inverted_index/TownNode.cpp.s
-.PHONY : inverted_index/TownNode.s
+RecordPointer.s: RecordPointer.cpp.s
+.PHONY : RecordPointer.s
 
 # target to generate assembly for a file
-inverted_index/TownNode.cpp.s:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/inverted_index/TownNode.cpp.s
-.PHONY : inverted_index/TownNode.cpp.s
+RecordPointer.cpp.s:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/RecordPointer.cpp.s
+.PHONY : RecordPointer.cpp.s
 
-inverted_index/Triple.o: inverted_index/Triple.cpp.o
-.PHONY : inverted_index/Triple.o
+TownNode.o: TownNode.cpp.o
+.PHONY : TownNode.o
 
 # target to build an object file
-inverted_index/Triple.cpp.o:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/inverted_index/Triple.cpp.o
-.PHONY : inverted_index/Triple.cpp.o
+TownNode.cpp.o:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/TownNode.cpp.o
+.PHONY : TownNode.cpp.o
 
-inverted_index/Triple.i: inverted_index/Triple.cpp.i
-.PHONY : inverted_index/Triple.i
+TownNode.i: TownNode.cpp.i
+.PHONY : TownNode.i
 
 # target to preprocess a source file
-inverted_index/Triple.cpp.i:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/inverted_index/Triple.cpp.i
-.PHONY : inverted_index/Triple.cpp.i
+TownNode.cpp.i:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/TownNode.cpp.i
+.PHONY : TownNode.cpp.i
 
-inverted_index/Triple.s: inverted_index/Triple.cpp.s
-.PHONY : inverted_index/Triple.s
+TownNode.s: TownNode.cpp.s
+.PHONY : TownNode.s
 
 # target to generate assembly for a file
-inverted_index/Triple.cpp.s:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/inverted_index/Triple.cpp.s
-.PHONY : inverted_index/Triple.cpp.s
+TownNode.cpp.s:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/TownNode.cpp.s
+.PHONY : TownNode.cpp.s
+
+Triple.o: Triple.cpp.o
+.PHONY : Triple.o
+
+# target to build an object file
+Triple.cpp.o:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/Triple.cpp.o
+.PHONY : Triple.cpp.o
+
+Triple.i: Triple.cpp.i
+.PHONY : Triple.i
+
+# target to preprocess a source file
+Triple.cpp.i:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/Triple.cpp.i
+.PHONY : Triple.cpp.i
+
+Triple.s: Triple.cpp.s
+.PHONY : Triple.s
+
+# target to generate assembly for a file
+Triple.cpp.s:
+	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/Triple.cpp.s
+.PHONY : Triple.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -279,30 +303,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-record/Record.o: record/Record.cpp.o
-.PHONY : record/Record.o
-
-# target to build an object file
-record/Record.cpp.o:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/record/Record.cpp.o
-.PHONY : record/Record.cpp.o
-
-record/Record.i: record/Record.cpp.i
-.PHONY : record/Record.i
-
-# target to preprocess a source file
-record/Record.cpp.i:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/record/Record.cpp.i
-.PHONY : record/Record.cpp.i
-
-record/Record.s: record/Record.cpp.s
-.PHONY : record/Record.s
-
-# target to generate assembly for a file
-record/Record.cpp.s:
-	$(MAKE) -f CMakeFiles/OS_F14_Prj1.dir/build.make CMakeFiles/OS_F14_Prj1.dir/record/Record.cpp.s
-.PHONY : record/Record.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -312,30 +312,30 @@ help:
 	@echo "... OS_F14_Prj1"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... hash/Bucket.o"
-	@echo "... hash/Bucket.i"
-	@echo "... hash/Bucket.s"
-	@echo "... hash/Hash.o"
-	@echo "... hash/Hash.i"
-	@echo "... hash/Hash.s"
-	@echo "... inverted_index/InvertedIndexList.o"
-	@echo "... inverted_index/InvertedIndexList.i"
-	@echo "... inverted_index/InvertedIndexList.s"
-	@echo "... inverted_index/RecordPointer.o"
-	@echo "... inverted_index/RecordPointer.i"
-	@echo "... inverted_index/RecordPointer.s"
-	@echo "... inverted_index/TownNode.o"
-	@echo "... inverted_index/TownNode.i"
-	@echo "... inverted_index/TownNode.s"
-	@echo "... inverted_index/Triple.o"
-	@echo "... inverted_index/Triple.i"
-	@echo "... inverted_index/Triple.s"
+	@echo "... Bucket.o"
+	@echo "... Bucket.i"
+	@echo "... Bucket.s"
+	@echo "... Hash.o"
+	@echo "... Hash.i"
+	@echo "... Hash.s"
+	@echo "... InvertedIndexList.o"
+	@echo "... InvertedIndexList.i"
+	@echo "... InvertedIndexList.s"
+	@echo "... Record.o"
+	@echo "... Record.i"
+	@echo "... Record.s"
+	@echo "... RecordPointer.o"
+	@echo "... RecordPointer.i"
+	@echo "... RecordPointer.s"
+	@echo "... TownNode.o"
+	@echo "... TownNode.i"
+	@echo "... TownNode.s"
+	@echo "... Triple.o"
+	@echo "... Triple.i"
+	@echo "... Triple.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... record/Record.o"
-	@echo "... record/Record.i"
-	@echo "... record/Record.s"
 .PHONY : help
 
 

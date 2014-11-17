@@ -8,7 +8,7 @@ TownNode::TownNode(string town) {
     this->head = nullptr;
     this->population = 0;
     this->next = nullptr;
-    this->invoiceSum = 0;
+    this->invoiceSum = 0.0;
 }
 
 TownNode::TownNode(const TownNode &node) {
@@ -38,9 +38,7 @@ void TownNode::clean() {
     }
 }
 
-TownNode::~TownNode() {
-//    cout << "Town node destroyed" << endl;
-}
+TownNode::~TownNode() {}
 
 string TownNode::getTown() {
     return this->town;
@@ -54,20 +52,6 @@ void TownNode::setNext(TownNode *townNode) {
     this->next = townNode;
 }
 
-
-
-/*if (topList == nullptr || topList->invoice < triple->invoice) {
-    triple->next = topList;
-    topList = triple;
-  }
-  else {
-    currentTop = topList;
-    while (currentTop->next != nullptr && currentTop->next->invoice >= triple->invoice) {
-        currentTop = currentTop->next;
-  }
-  triple->next = currentTop->next;
-  currentTop->next = triple;
-}*/
 void TownNode::addRecord(Record *record) {
     RecordPointer *toBeAdded = new RecordPointer(record);
     if (head == nullptr ||  head->getRecord()->getInvoice() < record->getInvoice()) {

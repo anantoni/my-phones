@@ -1,7 +1,7 @@
 #include <sstream>
 #include <fstream>
 #include "Hash.hpp"
-#include "../record/myRecord.hpp"
+#include "myRecord.hpp"
 
 Hash::Hash(int bucketNumber, InvertedIndexList *invertedIndex) {
     this->bucketNumber = bucketNumber;
@@ -97,16 +97,13 @@ void Hash::loadDataFile(string dataFile) {
     MyRecord rec;
     size_t numOfrecords = (int) lSize/sizeof(rec);
 
-    //cout << "Records found in file " << numOfrecords << endl;
     for (int i = 0; i < numOfrecords; i++) {
         fread(&rec, sizeof(rec), 1, fpb);
-//        printf("%s %s %s %s %-5.2f\n", rec.phone, rec.LastName, rec.FirstName, rec.Town, rec.invoice);
         Record *record = new Record(rec.phone, rec.LastName, rec.FirstName, rec.Town, rec.invoice);
         this->addRecord(record);
     }
     fclose (fpb);
     invertedIndex->sort();
-//    invertedIndex->printPopulations();
     cout << "Data file loaded successfully." << endl;
 }
 

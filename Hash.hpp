@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <iostream>
 #include "Bucket.hpp"
-#include "../inverted_index/InvertedIndexList.hpp"
+#include "InvertedIndexList.hpp"
+#include "InvertedIndexList.hpp"
 
 class Hash {
 private:

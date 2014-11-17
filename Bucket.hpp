@@ -1,7 +1,7 @@
 #ifndef BUCKET_HPP
 #define BUCKET_HPP
 
-#include "../record/Record.hpp"
+#include "Record.hpp"
 class Record;
 
 class Bucket {

@@ -1,7 +1,7 @@
 #ifndef RECORD_POINTER_HPP
 #define RECORD_POINTER_HPP
 
-#include "../record/Record.hpp"
+#include "Record.hpp"
 
 class RecordPointer {
     friend class TownNode;

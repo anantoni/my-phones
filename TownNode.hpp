@@ -1,7 +1,7 @@
 #ifndef INVERTED_INDEX_NODE_HPP
 #define INVERTED_INDEX_NODE_HPP
 
-#include "../record/Record.hpp"
+#include "Record.hpp"
 #include "RecordPointer.hpp"
 
 class RecordPointer;

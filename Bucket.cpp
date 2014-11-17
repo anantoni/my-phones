@@ -5,15 +5,7 @@ Bucket::Bucket() {
     head = nullptr;
 }
 
-Bucket::~Bucket() {
-//    Record* current = head;
-//    Record* next = nullptr;
-//    while (current!= nullptr) {
-//        next = current->next;
-//        delete current;
-//        current = next;
-//    }
-}
+Bucket::~Bucket() {}
 
 bool Bucket::pushBack(Record* record) {
     if (head == nullptr) {

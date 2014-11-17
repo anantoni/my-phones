@@ -3,7 +3,8 @@
 #include <bits/stl_algo.h>
 #include <complex>
 #include <fstream>
-#include "hash/Hash.hpp"
+#include "Hash.hpp"
+#include "InvertedIndexList.hpp"
 
 using namespace std;
 
